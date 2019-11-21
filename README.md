@@ -13,19 +13,19 @@
 8th Ave, W 31st, Madison Square Garden, Fairfield, Magnolia Bakery, NULL
 Fashion Ave, W 45th, Mariott, Forever 21, Line Friends, Shubert Theatre, NULL
 Fashion Ave, W 44th, Carmine's Italian Restaurant, Shubert Theatre, NULL
-Fashion Ave, W 43rd,
-Fashion Ave, W 42nd, Los Tacos No. 1
-Fashion Ave, W 41st,
-Fashion Ave, W 40th,
-Fashion Ave, W 39th,
-Fashion Ave, W 38th,  
-Fashion Ave, W 37th,
-Fashion Ave, W 36th,
-Fashion Ave, W 35th,
-Fashion Ave, W 34th,
-Fashion Ave, W 33rd,
-Fashion Ave, W 32nd,
-Fashion Ave, W 31st,
+6th Ave, W 43rd, Bluestone Lane, Royalton Hotel;
+6th Ave, W 42nd, STK Midtown, Whole Foods Market;
+6th Ave, W 41st, Train Station, Whole Foods Market, Bryant Park;
+6th Ave, W 40th, Bryant Park, L'ADRESSE;
+6th Ave, W 39th, Parker & Quinn, Elsie Rooftop;
+6th Ave, W 38th,  Refinery Rooftop;
+6th Ave, W 37th, Chick-fil-A, Bravo Kosher Pizza;
+6th Ave, W 36th, Keens Steakhouse;
+6th Ave, W 35th, Urban Outfitters, Herald Square;
+6th Ave, W 34th, Herald Square, Zara, Train Station;
+6th Ave, W 33rd, Target, Train Station, Martinique New York on Broadway, Stout NYC;
+6th Ave, W 32nd, Ess-a-Bagel, H Mart, Martinique New York on Broadway;
+6th Ave, W 31st, Stewart Hotel;
 6th Ave, W 45th,
 6th Ave, W 44th,
 6th Ave, W 43rd,
