@@ -26,51 +26,36 @@ Fashion Ave, W 44th, Carmine's Italian Restaurant, Shubert Theatre, NULL
 6th Ave, W 33rd, Target, Train Station, Martinique New York on Broadway, Stout NYC, NULL
 6th Ave, W 32nd, Ess-a-Bagel, H Mart, Martinique New York on Broadway, NULL
 6th Ave, W 31st, Stewart Hotel, NULL
-6th Ave, W 45th,
-6th Ave, W 44th,
-6th Ave, W 43rd,
-6th Ave, W 42nd,
-6th Ave, W 41st,
-6th Ave, W 40th,
-6th Ave, W 39th,
-6th Ave, W 38th,  
-6th Ave, W 37th,
-6th Ave, W 36th,
-6th Ave, W 35th,
-6th Ave, W 34th,
-6th Ave, W 33rd,
-6th Ave, W 32nd,
-6th Ave, W 31st,
-5th Ave, W 45th,
-5th Ave, W 44th,
-5th Ave, W 43rd,
-5th Ave, W 42nd,
-5th Ave, W 41st,
-5th Ave, W 40th,
-5th Ave, W 39th,
-5th Ave, W 38th,  
-5th Ave, W 37th,
-5th Ave, W 36th,
-5th Ave, W 35th,
-5th Ave, W 34th,
-5th Ave, W 33rd,
-5th Ave, W 32nd,
-5th Ave, W 31st,
-Madison Ave, W 45th,
-Madison Ave, W 44th,
-Madison Ave, W 43rd,
-Madison Ave, W 42nd,
-Madison Ave, W 41st,
+5th Ave, W 45th, NBA Store, Kellari Taverna, NULL
+5th Ave, W 44th, NBA Store, Kellari Taverna, NULL
+5th Ave, W 43rd, Royalton Hotel, Berkeley College, STK Midtown, NULL
+5th Ave, W 42nd, Zara, STK Midtown, Berkeley College, Bryant Park, NULL
+5th Ave, W 41st, MUJI, Bryant Park, NULL
+5th Ave, W 40th, Bryant Park, MUJI, NULL
+5th Ave, W 39th, Mad Dog & Mexican Cantina, Hotel Hendricks, NULL
+5th Ave, W 38th,  Reichenbach Hall, Hotel Hendricks, NULL
+5th Ave, W 37th, Reichenbach Hall, Cafe China, The Langham New York Fifth Avenue, NULL
+5th Ave, W 36th, The Langham New York Fifth Avenue, NULL
+5th Ave, W 35th, The Graduate Center CUNY, NULL
+5th Ave, W 34th, The Graduate Center CUNY, Empire State Building, NULL
+5th Ave, W 33rd, Empire State Building, Wendy's, Kang Ho Dong Baekjeong NYC, NULL
+5th Ave, W 32nd, Kang Ho Dong Baekjeong NYC, Jong Ro BBQ, NULL
+5th Ave, W 31st, Jong Ro BBQ, Arlo NoMad, Hyatt, NULL
+Madison Ave, W 45th, The Roosevelt Hotel, NULL
+Madison Ave, W 44th, Berkeley College, NULL
+Madison Ave, W 43rd, Berkeley College, NULL
+Madison Ave, W 42nd, Berkeley College, Chick-fil-A, NULL
+Madison Ave, W 41st, Chick-fil-A, Stout NYC, NULL
 Madison Ave, W 40th,
-Madison Ave, W 39th,
-Madison Ave, W 38th,  
-Madison Ave, W 37th,
-Madison Ave, W 36th,
+Madison Ave, W 39th, Zuma, Mad Dog & Beans Mexican Cantina, NULL
+Madison Ave, W 38th,  Zuma, Mad Dog & Beans Mexican Cantina, NULL
+Madison Ave, W 37th, Cafe China, NULL
+Madison Ave, W 36th, The Morgan Library & Museum, NULL
 Madison Ave, W 35th,
-Madison Ave, W 34th,
-Madison Ave, W 33rd,
-Madison Ave, W 32nd,
-Madison Ave, W 31st,
+Madison Ave, W 34th, The Ainsworth Midtown, NULL
+Madison Ave, W 33rd, Kang Ho Dong Baekjeong NYC, NULL
+Madison Ave, W 32nd, The Cutting Room, NULL
+Madison Ave, W 31st, Arlo NoMad, Mondrian Park Avenue, NULL
 Park Ave, W 45th, The Beer Bar, Naples 45 Ristorantee Pizzaeria, Vander Bar, Urbanspace at Vanderbilt, NULL
 Park Ave, W 44th, Martin's News & Sundry, Chirping Chicken, MetLife Building, Citi Bank, NULL
 Park Ave, W 43rd,Grand Central Terminal, Apple Grand Central, Dahlia, Origins, NULL
