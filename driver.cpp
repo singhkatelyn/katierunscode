@@ -61,10 +61,9 @@ int main()
     //use the two inputs to locate the exact vetex (endV)
 
     //find shortest path
-    g.DijkstraAlgorithm(startV, endV);
+    //inside printDirections, DijkstraAlgorithm will be run to find the shortest path possible
+    g.printDirections(NSSt, EWSt); //prints the directions to get to the final location
 
-    //print path
-    //g.printDirections()
 
     //display what is in the LL from that node
 
