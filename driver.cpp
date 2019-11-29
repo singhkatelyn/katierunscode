@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
-//#include "Graph.hpp"
-//#include "" Linked list.hpp
+#include "Graph.hpp"
+#include "LinkedList.hpp"
 using namespace std;
 
 int main()
@@ -15,8 +15,12 @@ int main()
 
 //declare an object of the LL class type
 
-  /*Graph g;
+  Graph g;
+  g.loadVertex();
+  g.loadEdges();
+  /*
   //load in graph verticies
+
     g.addVertex(0); //8th and 45th
     g.addVertex(1); //8th and 44th
     g.addVertex(2);
