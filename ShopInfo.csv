@@ -9,15 +9,15 @@
 8th Ave, W 34th, Butcher & Banker, Tick Tock Diner, Chickpea, Duchess Cookies, TD Bank, ATM, Taste NY, Halal Cart, NULL
 Fashion Ave, W 42nd, Train Station, New Amsterdam Theatre, NULL
 Fashion Ave, W 41st, New Amsterdam Theatre, Joe's Pizza, NULL
-Fashion Ave, W 40th, Joe's Pizza, 
-Fashion Ave, W 39th,
-Fashion Ave, W 38th,
-Fashion Ave, W 37th,
-Fashion Ave, W 36th,
-Fashion Ave, W 35th,
-Fashion Ave, W 34th,
-Fashion Ave, W 33rd,
-6th Ave, W 42nd, STK Midtown, Whole Foods Market;
+Fashion Ave, W 40th, Joe's Pizza, Midtown Comics, NULL
+Fashion Ave, W 39th, The Skylark, NULL
+Fashion Ave, W 38th, The Skylark, NULL
+Fashion Ave, W 37th, Mood Fabrics, Magic Hour Rooftop Bar & Lounge, NULL
+Fashion Ave, W 36th, Best Bagel & Coffee, Magic Hour Rooftop Bar & Lounge, NULL
+Fashion Ave, W 35th, Best Bagel & Coffee, Macy's, NULL
+Fashion Ave, W 34th, Macy's, Party City, Stout NYC, Magnolia Bakery, NULL
+Fashion Ave, W 33rd, Stout NYC, Magnolia Bakery, Madison Square Garden, Hotel Pennsylvania, NULL
+6th Ave, W 42nd, STK Midtown, Whole Foods Market, NULL
 6th Ave, W 41st, Train Station, Whole Foods Market, Bryant Park, NULL
 6th Ave, W 40th, Bryant Park, L'ADRESSE, NULL
 6th Ave, W 39th, Parker & Quinn, Elsie Rooftop, NULL
@@ -37,16 +37,21 @@ Fashion Ave, W 33rd,
 5th Ave, W 35th, The Graduate Center CUNY, NULL
 5th Ave, W 34th, The Graduate Center CUNY, Empire State Building, NULL
 5th Ave, W 33rd, Empire State Building, Wendy's, Kang Ho Dong Baekjeong NYC, NULL
-5th Ave, E 42nd, Zara, STK Midtown, Berkeley College, Bryant Park, NULL
-5th Ave, E 41st, MUJI, Bryant Park, NULL
-5th Ave, E 40th, Bryant Park, MUJI, NULL
-5th Ave, E 39th, Mad Dog & Mexican Cantina, Hotel Hendricks, NULL
-5th Ave, E 38th,  Reichenbach Hall, Hotel Hendricks, NULL
-5th Ave, E 37th, Reichenbach Hall, Cafe China, The Langham New York Fifth Avenue, NULL
-5th Ave, E 36th, The Langham New York Fifth Avenue, NULL
-5th Ave, E 35th, The Graduate Center CUNY, NULL
-5th Ave, E 34th, The Graduate Center CUNY, Empire State Building, NULL
-5th Ave, E 33rd, Empire State Building, Wendy's, Kang Ho Dong Baekjeong NYC, NULL
+5thAve, E 45th, NBA Store, Kellari Taverna, NULL
+5thAve, E 44th, NBA Store, Kellari Taverna, NULL
+5thAve, E 43rd, Royalton Hotel, Berkeley College, STK Midtown, NULL
+5thAve, E 42nd, Zara, STK Midtown, Berkeley College, Bryant Park, NULL
+5thAve, E 41st, MUJI, Bryant Park, NULL
+5thAve, E 40th, Bryant Park, MUJI, NULL
+5thAve, E 39th, Mad Dog & Mexican Cantina, Hotel Hendricks, NULL
+5thAve, E 38th,  Reichenbach Hall, Hotel Hendricks, NULL
+5thAve, E 37th, Reichenbach Hall, Cafe China, The Langham New York Fifth Avenue, NULL
+5thAve, E 36th, The Langham New York Fifth Avenue, NULL
+5thAve, E 35th, The Graduate Center CUNY, NULL
+5thAve, E 34th, The Graduate Center CUNY, Empire State Building, NULL
+5thAve, E 33rd, Empire State Building, Wendy's, Kang Ho Dong Baekjeong NYC, NULL
+5thAve, E 32nd, Kang Ho Dong Baekjeong NYC, Jong Ro BBQ, NULL
+5thAve, E 31st, Jong Ro BBQ, Arlo NoMad, Hyatt, NULL
 Madison Ave, E 42nd, Berkeley College, Chick-fil-A, NULL
 Madison Ave, E 41st, Chick-fil-A, Stout NYC, NULL
 Madison Ave, E 40th,
@@ -54,7 +59,7 @@ Madison Ave, E 39th, Zuma, Mad Dog & Beans Mexican Cantina, NULL
 Madison Ave, E 38th,  Zuma, Mad Dog & Beans Mexican Cantina, NULL
 Madison Ave, E 37th, Cafe China, NULL
 Madison Ave, E 36th, The Morgan Library & Museum, NULL
-Madison Ave, E 35th,
+Madison Ave, E 35th, Stout NYC, NULL
 Madison Ave, E 34th, The Ainsworth Midtown, NULL
 Madison Ave, E 33rd, Kang Ho Dong Baekjeong NYC, NULL
 Park Ave, E 42nd, Moe Joe, Pershing Squarem Central Market New York, Magnolia Bakery, Lin, Starbucks, World Market Trading Inc, Banana Republic, The Campbell, Juice Press, The Gran Central Oyster Bar & Restraunt, NULL
