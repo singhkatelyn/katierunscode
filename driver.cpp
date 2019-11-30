@@ -14,34 +14,11 @@ int main()
   string endV;
 
 //declare an object of the LL class type
-
+  LinkedList l;
+//declare an object of Graph class type
   Graph g;
   g.loadVertex();
   g.loadEdges();
-  /*
-  //load in graph verticies
-
-    g.addVertex(0); //8th and 45th
-    g.addVertex(1); //8th and 44th
-    g.addVertex(2);
-    g.addVertex(3);
-    g.addVertex(4);
-    g.addVertex(5);
-    g.addVertex(6);
-
-    //connect adj vertices
-    //assign weights (time values)
-      //if a larger road less time
-      //if near big touristy things more time
-    g.addEdge(0, 1); //8th and 45th/8th and 44th
-    g.addEdge(1, 2); //8th and 45th/fashion and 45th
-    g.addEdge(2, 0);
-    g.addEdge(1, 3);
-    g.addEdge(1, 4);
-    g.addEdge(1, 6);
-    g.addEdge(3, 5);
-    g.addEdge(4, 5);
-    */
     //read in from file
     //while(getline())
     //{
