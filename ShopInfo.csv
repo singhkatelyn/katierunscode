@@ -17,8 +17,6 @@ Fashion Ave, W 36th,
 Fashion Ave, W 35th,
 Fashion Ave, W 34th,
 Fashion Ave, W 33rd,
-Fashion Ave, W 32nd,
-Fashion Ave, W 31st,
 6th Ave, W 42nd, STK Midtown, Whole Foods Market;
 6th Ave, W 41st, Train Station, Whole Foods Market, Bryant Park, NULL
 6th Ave, W 40th, Bryant Park, L'ADRESSE, NULL
@@ -29,8 +27,6 @@ Fashion Ave, W 31st,
 6th Ave, W 35th, Urban Outfitters, Herald Square, NULL
 6th Ave, W 34th, Herald Square, Zara, Train Station, NULL
 6th Ave, W 33rd, Target, Train Station, Martinique New York on Broadway, Stout NYC, NULL
-6th Ave, W 32nd, Ess-a-Bagel, H Mart, Martinique New York on Broadway, NULL
-6th Ave, W 31st, Stewart Hotel, NULL
 5th Ave, W 42nd, Zara, STK Midtown, Berkeley College, Bryant Park, NULL
 5th Ave, W 41st, MUJI, Bryant Park, NULL
 5th Ave, W 40th, Bryant Park, MUJI, NULL
@@ -41,8 +37,6 @@ Fashion Ave, W 31st,
 5th Ave, W 35th, The Graduate Center CUNY, NULL
 5th Ave, W 34th, The Graduate Center CUNY, Empire State Building, NULL
 5th Ave, W 33rd, Empire State Building, Wendy's, Kang Ho Dong Baekjeong NYC, NULL
-5th Ave, W 32nd, Kang Ho Dong Baekjeong NYC, Jong Ro BBQ, NULL
-5th Ave, W 31st, Jong Ro BBQ, Arlo NoMad, Hyatt, NULL
 5th Ave, E 42nd, Zara, STK Midtown, Berkeley College, Bryant Park, NULL
 5th Ave, E 41st, MUJI, Bryant Park, NULL
 5th Ave, E 40th, Bryant Park, MUJI, NULL
@@ -53,8 +47,6 @@ Fashion Ave, W 31st,
 5th Ave, E 35th, The Graduate Center CUNY, NULL
 5th Ave, E 34th, The Graduate Center CUNY, Empire State Building, NULL
 5th Ave, E 33rd, Empire State Building, Wendy's, Kang Ho Dong Baekjeong NYC, NULL
-5th Ave, E 32nd, Kang Ho Dong Baekjeong NYC, Jong Ro BBQ, NULL
-5th Ave, E 31st, Jong Ro BBQ, Arlo NoMad, Hyatt, NULL
 Madison Ave, E 42nd, Berkeley College, Chick-fil-A, NULL
 Madison Ave, E 41st, Chick-fil-A, Stout NYC, NULL
 Madison Ave, E 40th,
@@ -65,8 +57,6 @@ Madison Ave, E 36th, The Morgan Library & Museum, NULL
 Madison Ave, E 35th,
 Madison Ave, E 34th, The Ainsworth Midtown, NULL
 Madison Ave, E 33rd, Kang Ho Dong Baekjeong NYC, NULL
-Madison Ave, E 32nd, The Cutting Room, NULL
-Madison Ave, E 31st, Arlo NoMad, Mondrian Park Avenue, NULL
 Park Ave, E 42nd, Moe Joe, Pershing Squarem Central Market New York, Magnolia Bakery, Lin, Starbucks, World Market Trading Inc, Banana Republic, The Campbell, Juice Press, The Gran Central Oyster Bar & Restraunt, NULL
 Park Ave, E 41st, 2Beans, Stout NYC, Benjamin Steak House, 120 Park Ave Assoc LLC, GNC, Blue Bottle Coffee, Blink Fitness, NULL
 Park Ave, E 40th, Potbelly Sandwhich Shop, Rafiqi's Halal Food, AKC Museum of the Dog, Cafe 101, Chopt, Sweetcatch Poke, NULL
@@ -77,8 +67,6 @@ Park Ave, E 36th, You-Chef, Toula Mylonakis DMD, 34 Park Row Gourmet, NULL
 Park Ave, E 35th, Medi Pedi NYC, WB Wood, Community Church of New York, Wind Richard MD,
 Park Ave, E 34th, Cafe Rustico II, Masala King, Duana Reade, Mendy's Deli & Restaurant, Green Leaf Gourmet, Franchia Vegan Cafe, Vitra, NULL
 Park Ave, E 33rd, Wolfgang's Steakhouse, Le Pain Quotidien, The Ainsworth - Mitown, NULL
-Park Ave, E 32nd, Pret A Manger, Sweetgreen, NYU Medical Center, Citi Bike, The Blue Rooftop, Starbucks, NULL
-Park Ave, E 31st, Chipotle, Starbucks, TD Bank, PS 450, Lenwich, Dunkin', NULL
 Lexington Ave, E 42nd, Chrysler Building, Grand Hyatt New York, Magnolia Bakery, LOFT, Chanin Building, Cipriani, NULL
 Lexington Ave, E 41st, Previti Pizza, De Janeiro, Public House, Pokeworks, Delmonico NYC, Katagiri Japanese Grocery, Zucker's Bagels & Smoked Fish, NULL
 Lexington Ave, E 40th, Vaco E Presso, Pearson Professional Centers, Peter Dilion's, Nirvana, The Renwick Hotel, NULL
@@ -89,8 +77,6 @@ Lexington Ave, E 36th, Citi Bike, Quest Diagnostics, Murry Hill Wee Ones Club, J
 Lexington Ave, E 35th, Stern College for Women, Stephen Ramsay, DMD, Holly M Gilvert, MD, Murry Hill Endodontics, NULL
 Lexington Ave, E 34th, Yeshiva University - Israel Henry Beren Campus, Santander, US Post Office, Guy & Gallard, Miraj Healthy Grill, BKK Eatery, Sonia Rose Restaurant, NULL
 Lexington Ave, E 33rd, Murray Hill Diner, NYU Langone Health, Peace Pool Chinese Hong Kong Restaurant, Yeshiva University, Butterfield Cafe, NULL
-Lexington Ave, E 32nd, Christopher Guy, Midtown New York Doctors Urgent Care, Coco-Mat, NULL
-Lexington Ave, E 31st, sprice Symphony, Brother Jimmy's BBQ, Vezzo, Natrueworks, NULL
 3rd Ave, E 42nd, CVS, Gap, Osteria Laguna, The Capital Grille, Joe & the Juice, NULL
 3rd Ave, E 41st, Sinigual, Community Bank
 3rd Ave, E 40th, Shake Shack, Turkish Consulate General in New York, Docks Oyster Bar and Seafood Grill, Zengo, NULL
@@ -101,5 +87,3 @@ Lexington Ave, E 31st, sprice Symphony, Brother Jimmy's BBQ, Vezzo, Natrueworks,
 3rd Ave, E 35th, Holey Cream, Ted;s Corner Tavern, D'Agostino, NULL
 3rd Ave, E 34th, The Flying Cock, Babylon Hookah Lounge, Joshua Tree, NULL
 3rd Ave, E 33rd, Insomnia Cookies, Blue Haven East, Cask Bar & Kitchen, 2nd Ave Deil, NULL
-3rd Ave, E 32nd, Parking Lot, Domino's Pizza, Blo Blow Dry Bar, Milton Glaser, Windsor Wine Shop, NULL
-3rd Ave, E 31st, VinoTapa, Trader Joes, Ruby Murry Hill, Eros Greek Restaurant, Citi Bike, NULL
