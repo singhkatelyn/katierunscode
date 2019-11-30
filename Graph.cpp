@@ -41,10 +41,8 @@ void Graph :: addVertex(string name){
 }
 
 
+
 void Graph :: loadVertex(){
-  addVertex("8th/W45th");
-  addVertex("8th/W44th");
-  addVertex("8th/W43rd");
   addVertex("8th/W42nd");
   addVertex("8th/W41st");
   addVertex("8th/W40th");
@@ -55,11 +53,6 @@ void Graph :: loadVertex(){
   addVertex("8th/W35th");
   addVertex("8th/W34rd");
   addVertex("8th/W33rd");
-  addVertex("8th/W32nd");
-  addVertex("8th/W31st");
-  addVertex("FashionAve/W45th");
-  addVertex("FashionAve/W44th");
-  addVertex("FashionAve/W43rd");
   addVertex("FashionAve/W42nd");
   addVertex("FashionAve/W41st");
   addVertex("FashionAve/W40th");
@@ -70,11 +63,6 @@ void Graph :: loadVertex(){
   addVertex("FashionAve/W35th");
   addVertex("FashionAve/W34th");
   addVertex("FashionAve/W33rd");
-  addVertex("FashionAve/W32nd");
-  addVertex("FashionAve/W31th");
-  addVertex("6thAve/W45th");
-  addVertex("6thAve/W44th");
-  addVertex("6thAve/W43rd");
   addVertex("6thAve/W42nd");
   addVertex("6thAve/W41st");
   addVertex("6thAve/W40th");
@@ -85,11 +73,6 @@ void Graph :: loadVertex(){
   addVertex("6thAve/W35th");
   addVertex("6thAve/W34th");
   addVertex("6thAve/W33rd");
-  addVertex("6thAve/W32nd");
-  addVertex("6thAve/W31st");
-  addVertex("5thAve/W45th");
-  addVertex("5thAve/W44th");
-  addVertex("5thAve/W43rd");
   addVertex("5thAve/W42nd");
   addVertex("5thAve/W41st");
   addVertex("5thAve/W40th");
@@ -100,11 +83,6 @@ void Graph :: loadVertex(){
   addVertex("5thAve/W35th");
   addVertex("5thAve/W34th");
   addVertex("5thAve/W33rd");
-  addVertex("5thAve/W32nd");
-  addVertex("5thAve/W31st");
-  addVertex("MadisonAve/E45th");
-  addVertex("MadisonAve/E44th");
-  addVertex("MadisonAve/E43rd");
   addVertex("MadisonAve/E42nd");
   addVertex("MadisonAve/E41st");
   addVertex("MadisonAve/E40th");
@@ -115,11 +93,6 @@ void Graph :: loadVertex(){
   addVertex("MadisonAve/E35th");
   addVertex("MadisonAve/E34th");
   addVertex("MadisonAve/E33rd");
-  addVertex("MadisonAve/E32nd");
-  addVertex("MadisonAve/E31st");
-  addVertex("ParkAve/E45th");
-  addVertex("ParkAve/E44th");
-  addVertex("ParkAve/E43rd");
   addVertex("ParkAve/E42nd");
   addVertex("ParkAve/E41st");
   addVertex("ParkAve/E40th");
@@ -130,11 +103,6 @@ void Graph :: loadVertex(){
   addVertex("ParkAve/E35th");
   addVertex("ParkAve/E34th");
   addVertex("ParkAve/E33rd");
-  addVertex("ParkAve/E32nd");
-  addVertex("ParkAve/E31st");
-  addVertex("LexingtonAve/E45th");
-  addVertex("LexingtonAve/E44th");
-  addVertex("LexingtonAve/E43rd");
   addVertex("LexingtonAve/E42nd");
   addVertex("LexingtonAve/E41st");
   addVertex("LexingtonAve/E40th");
@@ -145,11 +113,6 @@ void Graph :: loadVertex(){
   addVertex("LexingtonAve/E35th");
   addVertex("LexingtonAve/E34th");
   addVertex("LexingtonAve/E33rd");
-  addVertex("LexingtonAve/E32nd");
-  addVertex("LexingtonAve/E31st");
-  addVertex("3rdAve/E45th");
-  addVertex("3rdAve/E44th");
-  addVertex("3rdAve/E43rd");
   addVertex("3rdAve/E42nd");
   addVertex("3rdAve/E41st");
   addVertex("3rdAve/E40th");
@@ -160,40 +123,174 @@ void Graph :: loadVertex(){
   addVertex("3rdAve/E35th");
   addVertex("3rdAve/E34th");
   addVertex("3rdAve/E33rd");
-  addVertex("3rdAve/E32nd");
-  addVertex("3rdAve/E31st");
 }
 
 void Graph :: loadEdges(){
-  addEdge("8thAve/45th","8thAve/44th");
-  addEdge("8thAve/45th","FashionAve/45th");
-  addEdge("8thAve/44th","8thAve/43rd");
-  addEdge("8thAve/44th","FashionAve44th");
-  addEdge("8thAve/43rd","8thAve/42nd");
-  addEdge("8thAve/43rd","FashionAve/43rd");
-  addEdge("8thAve/42nd","8thAve/41std");
-  addEdge("8thAve/42nd","FashionAve/42nd");
-  addEdge("8thAve/41st","8thAve/40th");
-  addEdge("8thAve/41st","FashionAve/41st");
-  addEdge("8thAve/40th","8thAve/39th");
-  addEdge("8thAve/40th","FashionAve/40th");
-  addEdge("8thAve/39th","8thAve/38th");
-  addEdge("8thAve/39th","FashionAve/39th");
-  addEdge("8thAve/38th","8thAve/37th");
-  addEdge("8thAve/38th","FashionAve/38th");
-  addEdge("8thAve/37th","8thAve/36th");
-  addEdge("8thAve/37th","FashionAve/37th");
-  addEdge("8thAve/36th","8thAve/35th");
-  addEdge("8thAve/36th","FashionAve/36th");
-  addEdge("8thAve/35th","8thAve/34th");
-  addEdge("8thAve/35th","FashionAve/35th");
-  addEdge("8thAve/34th","8thAve/33rd");
-  addEdge("8thAve/34th","FashionAve/34th");
-  addEdge("8thAve/33rd","8thAve/32nd");
-  addEdge("8thAve/33rd","FashionAve/33rd");
-  addEdge("8thAve/32nd","8thAve/31st");
-  addEdge("8thAve/32nd","FashionAve/32nd");
-  addEdge("8thAve/31st","FashionAve/31t");
+  addEdge("8thAve/42nd","8thAve/W41std", rand() % 10 + 1);
+  addEdge("8thAve/42nd","FashionAve/W42nd", rand() % 10 + 1);
+  addEdge("8thAve/41st","8thAve/W40th", rand() % 10 + 1);
+  addEdge("8thAve/41st","FashionAve/W41st", rand() % 10 + 1);
+  addEdge("8thAve/40th","8thAve/W39th", rand() % 10 + 1);
+  addEdge("8thAve/40th","FashionAve/W40th", rand() % 10 + 1);
+  addEdge("8thAve/39th","8thAve/W38th", rand() % 10 + 1);
+  addEdge("8thAve/39th","FashionAve/W39th", rand() % 10 + 1);
+  addEdge("8thAve/38th","8thAve/W37th", rand() % 10 + 1);
+  addEdge("8thAve/38th","FashionAve/W38th", rand() % 10 + 1);
+  addEdge("8thAve/37th","8thAve/W36th", rand() % 10 + 1);
+  addEdge("8thAve/37th","FashionAve/W37th", rand() % 10 + 1);
+  addEdge("8thAve/36th","8thAve/W35th", rand() % 10 + 1);
+  addEdge("8thAve/36th","FashionAve/W36th", rand() % 10 + 1);
+  addEdge("8thAve/35th","8thAve/W34th", rand() % 10 + 1);
+  addEdge("8thAve/35th","FashionAve/W35th", rand() % 10 + 1);
+  addEdge("8thAve/34th","8thAve/W33rd", rand() % 10 + 1);
+  addEdge("8thAve/34th","FashionAve/W34th", rand() % 10 + 1);
+  addEdge("8thAve/33rd","FashionAve/W33rd", rand() % 10 + 1);
+  addEdge("FashionAve/W43rd","FashionAve/W42nd", rand() % 10 + 1);
+  addEdge("FashionAve/W42nd","6thAve/W42nd", rand() % 10 + 1);
+  addEdge("FashionAve/W42nd","FashionAve/W41st", rand() % 10 + 1);
+  addEdge("FashionAve/W41st","6thAve/W41st", rand() % 10 + 1);
+  addEdge("FashionAve/W41st","FashionAve/W40th", rand() % 10 + 1);
+  addEdge("FashionAve/W40th","6thAve/W40th", rand() % 10 + 1);
+  addEdge("FashionAve/W40th","FashionAve/W39th", rand() % 10 + 1);
+  addEdge("FashionAve/W39th","6thAve/W39th", rand() % 10 + 1);
+  addEdge("FashionAve/W39th","FashionAve/W38th", rand() % 10 + 1);
+  addEdge("FashionAve/W38th","6thAve/W38th", rand() % 10 + 1);
+  addEdge("FashionAve/W38th","FashionAve/W37th", rand() % 10 + 1);
+  addEdge("FashionAve/W37th","6thAve/W37th", rand() % 10 + 1);
+  addEdge("FashionAve/W37th","FashionAve/W36th", rand() % 10 + 1);
+  addEdge("FashionAve/W36th","6thAve/W36th", rand() % 10 + 1);
+  addEdge("FashionAve/W36th","FashionAve/W35th", rand() % 10 + 1);
+  addEdge("FashionAve/W35th","6thAve/W35th", rand() % 10 + 1);
+  addEdge("FashionAve/W35th","FashionAve/W34th", rand() % 10 + 1);
+  addEdge("FashionAve/W34th","6thAve/W34th", rand() % 10 + 1);
+  addEdge("FashionAve/W34th","FashionAve/W33rd", rand() % 10 + 1);
+  addEdge("FashionAve/W33rd","6thAve/W33rd", rand() % 10 + 1);
+  addEdge("6thAve/W42nd", "5thAve/W42nd", rand() % 10 + 1);
+  addEdge("6thAve/W42nd", "6thAve/W41st", rand() % 10 + 1);
+  addEdge("6thAve/W41st", "5thAve/W41st", rand() % 10 + 1);
+  addEdge("6thAve/W41st", "6thAve/W40th", rand() % 10 + 1);
+  addEdge("6thAve/W40th", "5thAve/W40th", rand() % 10 + 1);
+  addEdge("6thAve/W40th", "6thAve/W39th", rand() % 10 + 1);
+  addEdge("6thAve/W39th", "5thAve/W39th", rand() % 10 + 1);
+  addEdge("6thAve/W39th", "6thAve/W38th", rand() % 10 + 1);
+  addEdge("6thAve/W38th", "5thAve/W38th", rand() % 10 + 1);
+  addEdge("6thAve/W38th", "6thAve/W37th", rand() % 10 + 1);
+  addEdge("6thAve/W37th", "5thAve/W37th", rand() % 10 + 1);
+  addEdge("6thAve/W37th", "6thAve/W36th", rand() % 10 + 1);
+  addEdge("6thAve/W36th", "5thAve/W36th", rand() % 10 + 1);
+  addEdge("6thAve/W36th", "6thAve/W35th", rand() % 10 + 1);
+  addEdge("6thAve/W35th", "5thAve/W35th", rand() % 10 + 1);
+  addEdge("6thAve/W35th", "6thAve/W34th", rand() % 10 + 1);
+  addEdge("6thAve/W34th", "5thAve/W34th", rand() % 10 + 1);
+  addEdge("6thAve/W34th", "6thAve/W33rd", rand() % 10 + 1);
+  addEdge("6thAve/W33rd", "5thAve/W33rd", rand() % 10 + 1);
+  addEdge("5thAve/W42nd","5thAve/E42nd", 0); //connects the east and west streets together, this is actually supposed to be 1 node so that is why the weight is 0
+  addEdge("5thAve/W41st","5thAve/E41st", 0);
+  addEdge("5thAve/W40th","5thAve/E40th", 0);
+  addEdge("5thAve/W39th","5thAve/E39th", 0);
+  addEdge("5thAve/W38th","5thAve/E38th", 0);
+  addEdge("5thAve/W37th","5thAve/E37th", 0);
+  addEdge("5thAve/W36th","5thAve/E36th", 0);
+  addEdge("5thAve/W35th","5thAve/E35th", 0);
+  addEdge("5thAve/W34th","5thAve/E34th", 0);
+  addEdge("5thAve/W33th","5thAve/E33th", 0);
+  addEdge("5thAve/E42nd", "MadisonAve/E42nd", rand() % 10 + 1);
+  addEdge("5thAve/E42nd", "5thAve/E41st", rand() % 10 + 1);
+  addEdge("5thAve/E41st", "MadisonAve/E41st", rand() % 10 + 1);
+  addEdge("5thAve/E41st", "5thAve/E40th", rand() % 10 + 1);
+  addEdge("5thAve/E40th", "MadisonAve/E40th", rand() % 10 + 1);
+  addEdge("5thAve/E40th", "5thAve/E39th", rand() % 10 + 1);
+  addEdge("5thAve/E39th", "MadisonAve/E39th", rand() % 10 + 1);
+  addEdge("5thAve/E39th", "5thAve/E38th", rand() % 10 + 1);
+  addEdge("5thAve/E38th", "MadisonAve/E38th", rand() % 10 + 1);
+  addEdge("5thAve/E38th", "5thAve/E37th", rand() % 10 + 1);
+  addEdge("5thAve/E37th", "MadisonAve/E37th", rand() % 10 + 1);
+  addEdge("5thAve/E37th", "5thAve/E36th", rand() % 10 + 1);
+  addEdge("5thAve/E36th", "MadisonAve/E36th", rand() % 10 + 1);
+  addEdge("5thAve/E36th", "5thAve/E35th", rand() % 10 + 1);
+  addEdge("5thAve/E35th", "MadisonAve/E35th", rand() % 10 + 1);
+  addEdge("5thAve/E35th", "5thAve/E34th", rand() % 10 + 1);
+  addEdge("5thAve/E34th", "MadisonAve/E34th", rand() % 10 + 1);
+  addEdge("5thAve/E34th", "5thAve/E33rd", rand() % 10 + 1);
+  addEdge("5thAve/E33rd", "MadisonAve/E33rd", rand() % 10 + 1);
+  addEdge("MadisonAve/E42nd", "ParkAve/E42nd", rand() % 10 + 1);
+  addEdge("MadisonAve/E42nd", "MadisonAve/E41st", rand() % 10 + 1);
+  addEdge("MadisonAve/E41st", "ParkAve/E41st", rand() % 10 + 1);
+  addEdge("MadisonAve/E41st", "MadisonAve/E40th", rand() % 10 + 1);
+  addEdge("MadisonAve/E40th", "ParkAve/E40th", rand() % 10 + 1);
+  addEdge("MadisonAve/E40th", "MadisonAve/E39th", rand() % 10 + 1);
+  addEdge("MadisonAve/E39th", "ParkAve/E39th", rand() % 10 + 1);
+  addEdge("MadisonAve/E39th", "MadisonAve/E38th", rand() % 10 + 1);
+  addEdge("MadisonAve/E38th", "ParkAve/E38th", rand() % 10 + 1);
+  addEdge("MadisonAve/E38th", "MadisonAve/E37th", rand() % 10 + 1);
+  addEdge("MadisonAve/E37th", "ParkAve/E37th", rand() % 10 + 1);
+  addEdge("MadisonAve/E37th", "MadisonAve/E36th", rand() % 10 + 1);
+  addEdge("MadisonAve/E36th", "ParkAve/E36th", rand() % 10 + 1);
+  addEdge("MadisonAve/E36th", "MadisonAve/E35th", rand() % 10 + 1);
+  addEdge("MadisonAve/E35th", "ParkAve/E35th", rand() % 10 + 1);
+  addEdge("MadisonAve/E35th", "MadisonAve/E34th", rand() % 10 + 1);
+  addEdge("MadisonAve/E34th", "ParkAve/E34th", rand() % 10 + 1);
+  addEdge("MadisonAve/E34th", "MadisonAve/E33rd", rand() % 10 + 1);
+  addEdge("MadisonAve/E33rd", "ParkAve/E33rd", rand() % 10 + 1);
+  addEdge("ParkAve/E42nd", "LexingtonAve/E42nd", rand() % 10 + 1);
+  addEdge("ParkAve/E42nd", "ParkAve/E41st", rand() % 10 + 1);
+  addEdge("ParkAve/E41st", "LexingtonAve/E41st", rand() % 10 + 1);
+  addEdge("ParkAve/E41st", "ParkAve/E40th", rand() % 10 + 1);
+  addEdge("ParkAve/E40th", "LexingtonAve/E40th", rand() % 10 + 1);
+  addEdge("ParkAve/E40th", "ParkAve/E39th", rand() % 10 + 1);
+  addEdge("ParkAve/E39th", "LexingtonAve/E39th", rand() % 10 + 1);
+  addEdge("ParkAve/E39th", "ParkAve/E38th", rand() % 10 + 1);
+  addEdge("ParkAve/E38th", "LexingtonAve/E38th", rand() % 10 + 1);
+  addEdge("ParkAve/E38th", "ParkAve/E37th", rand() % 10 + 1);
+  addEdge("ParkAve/E37th", "LexingtonAve/E37th", rand() % 10 + 1);
+  addEdge("ParkAve/E37th", "ParkAve/E36th", rand() % 10 + 1);
+  addEdge("ParkAve/E36th", "LexingtonAve/E36th", rand() % 10 + 1);
+  addEdge("ParkAve/E36th", "ParkAve/E35th", rand() % 10 + 1);
+  addEdge("ParkAve/E35th", "LexingtonAve/E35th", rand() % 10 + 1);
+  addEdge("ParkAve/E35th", "ParkAve/E34th", rand() % 10 + 1);
+  addEdge("ParkAve/E34th", "LexingtonAve/E34th", rand() % 10 + 1);
+  addEdge("ParkAve/E34th", "ParkAve/E33rd", rand() % 10 + 1);
+  addEdge("ParkAve/E33rd", "LexingtonAve/E33rd", rand() % 10 + 1);
+  addEdge("LexingtonAve/E42nd", "3rdAve/E42nd", rand() % 10 + 1);
+  addEdge("LexingtonAve/E42nd", "LexingtonAve/E41st", rand() % 10 + 1);
+  addEdge("LexingtonAve/E41st", "3rdAve/E41st", rand() % 10 + 1);
+  addEdge("LexingtonAve/E41st", "LexingtonAve/E40th", rand() % 10 + 1);
+  addEdge("LexingtonAve/E40th", "3rdAve/E40th", rand() % 10 + 1);
+  addEdge("LexingtonAve/E40th", "LexingtonAve/E39th", rand() % 10 + 1);
+  addEdge("LexingtonAve/E39th", "3rdAve/E39th", rand() % 10 + 1);
+  addEdge("LexingtonAve/E39th", "LexingtonAve/E38th", rand() % 10 + 1);
+  addEdge("LexingtonAve/E38th", "3rdAve/E38th", rand() % 10 + 1);
+  addEdge("LexingtonAve/E38th", "LexingtonAve/E37th", rand() % 10 + 1);
+  addEdge("LexingtonAve/E37th", "3rdAve/E37th", rand() % 10 + 1);
+  addEdge("LexingtonAve/E37th", "LexingtonAve/E36th", rand() % 10 + 1);
+  addEdge("LexingtonAve/E36th", "3rdAve/E36th", rand() % 10 + 1);
+  addEdge("LexingtonAve/E36th", "LexingtonAve/E35th", rand() % 10 + 1);
+  addEdge("LexingtonAve/E35th", "3rdAve/E35th", rand() % 10 + 1);
+  addEdge("LexingtonAve/E35th", "LexingtonAve/E34th", rand() % 10 + 1);
+  addEdge("LexingtonAve/E34th", "3rdAve/E34th", rand() % 10 + 1);
+  addEdge("LexingtonAve/E34th", "LexingtonAve/E33rd", rand() % 10 + 1);
+  addEdge("LexingtonAve/E33rd", "3rdAve/E33rd", rand() % 10 + 1);
+  addEdge("3rdAve/E42nd", "3rdAve/E41st", rand() % 10 + 1);
+  addEdge("3rdAve/E41st", "3rdAve/E40th", rand() % 10 + 1);
+  addEdge("3rdAve/E40th", "3rdAve/E39th", rand() % 10 + 1);
+  addEdge("3rdAve/E39th", "3rdAve/E38th", rand() % 10 + 1);
+  addEdge("3rdAve/E38th", "3rdAve/E37th", rand() % 10 + 1);
+  addEdge("3rdAve/E37th", "3rdAve/E36th", rand() % 10 + 1);
+  addEdge("3rdAve/E36th", "3rdAve/E35th", rand() % 10 + 1);
+  addEdge("3rdAve/E35th", "3rdAve/E34th", rand() % 10 + 1);
+  addEdge("3rdAve/E34th", "3rdAve/E33rd", rand() % 10 + 1);
+}
+
+
+
+void Graph :: displayEdges(){
+  for(unsigned int i = 0; i < vertices.size(); i++){
+    cout << vertices[i] -> name << " --> ";
+    for(unsigned int j = 0; j < vertices[i] -> adj.size(); j++){
+       cout << vertices[i]->adj[j].v->name << " ";
+    }
+    cout << endl;
+  }
 }
 
 void DFTraversalHelper(vertex* p){
