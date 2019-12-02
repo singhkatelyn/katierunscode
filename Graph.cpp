@@ -1,11 +1,12 @@
 #include "Graph.hpp"
+#include "LinkedList.hpp"
 #include <iostream>
 #include <vector>
 #include <climits>
 
 using namespace std;
 
-void Graph::addEdge(string v1, string v2, int num){
+void NewYork::addEdge(string v1, string v2, int num){
     for(unsigned int i = 0; i < vertices.size(); i++){
         if(vertices[i] -> name == v1){
             for(unsigned int j = 0; j < vertices.size(); j++){
@@ -25,11 +26,11 @@ void Graph::addEdge(string v1, string v2, int num){
     }
 }
 
-void Graph :: addVertex(string name){
+void NewYork :: addVertex(string name){
   bool found = false;
     for(int i = 0; i < vertices.size(); i++){
         if(vertices[i]->name == name){
-            vertices[i] -> visted = true;
+            vertices[i] -> visited = true;
             found = true;
         }
     }
@@ -42,7 +43,7 @@ void Graph :: addVertex(string name){
 
 
 
-void Graph :: loadVertex(){
+void NewYork :: loadVertex(){
   addVertex("8th/W42nd");
   addVertex("8th/W41st");
   addVertex("8th/W40th");
@@ -125,7 +126,7 @@ void Graph :: loadVertex(){
   addVertex("3rdAve/E33rd");
 }
 
-void Graph :: loadEdges(){
+void NewYork :: loadEdges(){
   addEdge("8thAve/42nd","8thAve/W41std", rand() % 10 + 1);
   addEdge("8thAve/42nd","FashionAve/W42nd", rand() % 10 + 1);
   addEdge("8thAve/41st","8thAve/W40th", rand() % 10 + 1);
@@ -283,7 +284,7 @@ void Graph :: loadEdges(){
 
 
 
-void Graph :: displayEdges(){
+void NewYork :: displayEdges(){
   for(unsigned int i = 0; i < vertices.size(); i++){
     cout << vertices[i] -> name << " --> ";
     for(unsigned int j = 0; j < vertices[i] -> adj.size(); j++){
@@ -293,36 +294,68 @@ void Graph :: displayEdges(){
   }
 }
 
-void DFTraversalHelper(vertex* p){
+// void NewYork :: breadthFirstTraverse(string sourceVertex, string storeType){
+//   queue<vertex*> q;
+//   vertex *vStart;
+//   cout<< "Starting vertex (root): " << sourceVertex << "-> "; //keep for testing
+//   vertex *n;
+//   for(unsigned int i = 0; i < vertices.size(); i++)
+//   {
+//       if(vertices[i]->name == sourceVertex)
+//       {
+//           vStart = vertices[i];
+//       }
+//   }
+//   q.push(vStart);
+//   vStart->visited = true;
+//   store* temp;
+//   temp = vStart->head;
+//   while(!temp){
+//     if(temp -> storeType == storeType){
+//       cout << "The closest " << storeType << " is at " << sourceVertex << endl;
+//       printDirections(sourceVertex, sourceVertex);
+//       break;
+//       //call the firections from here and end the code
+//     }
+//   }
+//   while(!q.empty()){
+//       n = q.front();
+//       q.pop();
+//       // go to all the adjacent vertices of n
+//       for(unsigned int x = 0; x < n->adj.size(); x++)
+//       {
+//         if(n->adj[x].v->visited == false){
+//           n->adj[x].v->visited = true;
+//           n->adj[x].v->distance = n->distance + 1;
+//           temp = n->adj[x].v->head;
+//           while(!temp){
+//             if(temp -> storeType == storeType){
+//               cout << "The closest " << storeType << " is at " << n->adj[x].v->name << endl;
+//               string name = n->adj[x].v->name.str();
+//               printDirections(sourceVertex, n->adj[x].v->name); //this is gonna give an error
+//               break;
+//               //call directions and stop running the code
+//             }
+//           }
+//           q.push(n->adj[x].v);
+//           cout << n->adj[x].v->name <<"("<< n->adj[x].v->distance <<")"<< " ";
+//         }
+//       }
+//   }
+// }
 
-  p->visited = true;
-
-  for(unsigned int x = 0; x < p->adj.size(); x++ )
-  {
-      // TODO
-      if(p->adj[x].v->visited == false)
-      {
-        cout << p->adj[x].v->name << " --> ";
-        DFTraversalHelper(p->adj[x].v);
-      }
-  }
+/*
+vertex* NewYork :: searchGraph(string streetName){
+  find the street name and return the intersection vertex
 }
-void Graph::depthFirstTraversal(string sourceVertex)
-{
-  vertex *n;
-  for(unsigned int i = 0; i < vertices.size(); i++)
-  {
-      if(vertices[i]->name == sourceVertex)
-      {
-          n = vertices[i];
-      }
-  }
-  cout << sourceVertex << " --> ";
-  DFTraversalHelper(n);
-  cout << "Done" << endl;
-}
 
-vertex* Graph::DijkstraAlgorithm(string start, string end)
+
+*/
+
+
+
+
+vertex* NewYork::DijkstraAlgorithm(string start, string end)
 {
  //start and end represent the beginning and ending vertices
  vertex *vStart;
@@ -375,8 +408,12 @@ vertex* Graph::DijkstraAlgorithm(string start, string end)
    return vEnd;
 }
 
+// void NewYork :: findStoreType(string start, string storeType){
+//   store* intersection;
+//   breadthFirstTraverse(start, storeType);
+// }
 
-void Graph :: printDirections(string s1, string s2){
+void NewYork :: printDirections(string s1, string s2){
   vector<string> solvedList;
   vertex* n = DijkstraAlgorithm(s1, s2);
   while(n->name != s1){
