@@ -5,7 +5,7 @@
 #include "LinkedList.hpp"
 using namespace std;
 
-int main(int argc, char *argv[]) //1: .csv
+int main()
 {
   string EWStCurr;
   string NSStCurr;
@@ -20,33 +20,41 @@ int main(int argc, char *argv[]) //1: .csv
   Graph g;
   g.loadVertex();
   g.loadEdges();
+  int counter = 0;
   
   //declare string to hold the stores from file
-  string word; 
+  string line;
+  string store;
+  string intersection;
   
   //declare things to be passed into insertStore
   store* prev;
   string storeName;
   
-  ifstream fin(argv[1]); //assign the csv file to fin
+  ifstream fin("ShopInfo.csv"); //assign the csv file to fin
   //read in from file
   if(fin.is_open())
   {
-    while(getline(fin, stores))//read in line by line
+    while(getline(fin, line))//read in line by line
     {
-      sringstream ss(stores); //use string stream to separate words
-      while(ss >> word) //what am I doing here
+      sringstream ss(line); //use string stream to separate words
+      getline(ss, intersection, ',');
+      counter++;//note that the first word is added
+      //search the graph for "intersection"
+      //g.search(intersection);
+      //to find the vertex in which the linked list will be attached
+      while(coutner > 0 && ss != "NULL") //after the first word then add the words to the linked list
       {
-        if(word != "NULL")//fill linked list with words until NULL??
-        {
-          
-        }
+        getline(ss, store, ',');
+        //add store to LL
+        l.insertStore(prev, storeName);
+        //vertex struct in graph: name of intersection + LL
       }
-      //fill LL at each vertex of the graph (intersection)
-      l.insertStore(prev, storeName);
     }
   }
 
+  //if the words being read in matches the word while traversing (search for that word) then add to the linked list
+  //combine first two words into 1
     cout << "Enter the street you are on that runs North to South. Use the form 'StreetNameAve' e.i. '8thAve' or 'FashionAve'." << endl;
     cin >> NSStCurr;
     cout << "Enter the street you are on that runs East to West. Use the form 'FIRST_LETTER_OF_CARINAL_DIRECTIONSTREET_NUMBER_superscript' e.i. 'W45th' or 'E31st'." << endl;
