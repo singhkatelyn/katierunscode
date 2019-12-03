@@ -1,5 +1,4 @@
-#include "Graph.hpp"
-#include "LinkedList.hpp"
+#include "Header.hpp"
 #include <iostream>
 #include <vector>
 #include <climits>
@@ -40,7 +39,6 @@ void NewYork :: addVertex(string name){
         vertices.push_back(newVertex);
     }
 }
-
 
 
 void NewYork :: loadVertex(){
@@ -368,6 +366,30 @@ vertex* NewYork :: searchGraph(string streetName){
       }
   }
   return 0;
+}
+
+void NewYork::insertStore(store* previous, string storeName){
+  store* temp;
+  if (previous == NULL){
+    cout << "adding: " << storeName << " (HEAD)" << endl; //comment out after testing is done
+    temp = head;
+    head = new store;
+    head -> name = storeName;
+    head -> next = temp;
+  }
+  else if (head == NULL){
+    cout << "adding: " << storeName << " (HEAD)" << endl; //comment out after testing is done
+    head = new store;
+    head -> name = storeName;
+    head -> next = NULL;
+  }
+  else{
+    cout << "adding: " << storeName << " (prev: " << previous -> name << ")" << endl; //comment out after testing is done
+    temp = new store;
+    temp -> next = previous -> next; //a to c now b to c
+    previous -> next = temp; //a to b
+    temp -> name = storeName; //fill
+  }
 }
 
 vertex* NewYork::DijkstraAlgorithm(string start, string end)
