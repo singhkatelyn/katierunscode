@@ -43,7 +43,7 @@ class NewYork{
     void loadEdges();
     void displayEdges(); //use this only for testing
     // void breadthFirstTraverse(string sourceVertex, string);
-    vertex* searchGraph(string);
+    vertex* searchGraph(string streetName);
     vertex* DijkstraAlgorithm(string start, string end);
     void findStoreType(string, string);
     void printDirections(string start, string end);
