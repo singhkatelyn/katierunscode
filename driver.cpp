@@ -1,8 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <sstream>
-#include "Graph.hpp"
-#include "LinkedList.hpp"
+#include "Header.hpp"
 using namespace std;
 
 int main()
@@ -15,22 +14,21 @@ int main()
   string endV;
 
 //declare an object of the LL class type
-  LinkedList l;
 //declare an object of Graph class type
-  Graph g;
-  g.loadVertex();
-  g.loadEdges();
+  Header h;
+  h.loadVertex();
+  h.loadEdges();
   int counter = 0;
-  
+
   //declare string to hold the stores from file
   string line;
   string store;
   string intersection;
-  
+
   //declare things to be passed into insertStore
   store* prev;
   string storeName;
-  
+
   ifstream fin("ShopInfo.csv"); //assign the csv file to fin
   //read in from file
   if(fin.is_open())
@@ -47,7 +45,7 @@ int main()
       {
         getline(ss, store, ',');
         //add store to LL
-        l.insertStore(prev, storeName);
+        h.insertStore(prev, storeName);
         //vertex struct in graph: name of intersection + LL
       }
     }
@@ -59,6 +57,7 @@ int main()
     cin >> NSStCurr;
     cout << "Enter the street you are on that runs East to West. Use the form 'FIRST_LETTER_OF_CARINAL_DIRECTIONSTREET_NUMBER_superscript' e.i. 'W45th' or 'E31st'." << endl;
     cin >> EWStCurr;
+
 
     //use the two inputs to locate the exact vetex (startV)
 
@@ -72,7 +71,7 @@ int main()
 
     //find shortest path
     //inside printDirections, DijkstraAlgorithm will be run to find the shortest path possible
-    g.printDirections(NSSt, EWSt); //prints the directions to get to the final location
+    h.printDirections(NSSt, EWSt); //prints the directions to get to the final location
 
 
     //display what is in the LL from that node
