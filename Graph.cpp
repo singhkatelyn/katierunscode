@@ -44,16 +44,16 @@ void NewYork :: addVertex(string name){
 
 
 void NewYork :: loadVertex(){
-  addVertex("8th/W42nd");
-  addVertex("8th/W41st");
-  addVertex("8th/W40th");
-  addVertex("8th/W39th");
-  addVertex("8th/W38th");
-  addVertex("8th/W37th");
-  addVertex("8th/W36th");
-  addVertex("8th/W35th");
-  addVertex("8th/W34rd");
-  addVertex("8th/W33rd");
+  addVertex("8thAve/W42nd");
+  addVertex("8thAve/W41st");
+  addVertex("8thAve/W40th");
+  addVertex("8thAve/W39th");
+  addVertex("8thAve/W38th");
+  addVertex("8thAve/W37th");
+  addVertex("8thAve/W36th");
+  addVertex("8thAve/W35th");
+  addVertex("8thAve/W34rd");
+  addVertex("8thAve/W33rd");
   addVertex("FashionAve/W42nd");
   addVertex("FashionAve/W41st");
   addVertex("FashionAve/W40th");
