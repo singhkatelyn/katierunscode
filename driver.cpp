@@ -43,7 +43,7 @@ int main()
       //search the graph for "intersection"
       //g.search(intersection);
       //to find the vertex in which the linked list will be attached
-      while(coutner > 0 && ss != "NULL") //after the first word then add the words to the linked list
+      while(coutner > 0 && store != "NULL") //after the first word then add the words to the linked list
       {
         getline(ss, store, ',');
         //add store to LL
