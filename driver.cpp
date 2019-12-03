@@ -2,57 +2,61 @@
 #include <vector>
 #include <sstream>
 #include "Header.hpp"
+#include<string>
 using namespace std;
 
 int main()
 {
-  string EWStCurr;
-  string NSStCurr;
-  string EWSt;
-  string NSSt;
-  string startV;
-  string endV;
+  //what the user types in
+  string EWStCurr;//the street you're on
+  string NSStCurr;//the steet you're on
+  string EWSt;//the street going to
+  string NSSt;//the street going to
+  string startV; //combine the words
+  string endV; //combine the words
 
 //declare an object of the LL class type
 //declare an object of Graph class type
   Header h;
+//create graph
   h.loadVertex();
   h.loadEdges();
+
+//initialize a counter to keep track of what you're reading in from file
   int counter = 0;
 
-  //declare string to hold the stores from file
+//vertex of the street that the words that will be added to the LL to be passed into insertStore
+  store* vertexOfInt;
+
+//declare string what you're reading in from file
   string line;
   string store;
   string intersection;
 
-  //declare things to be passed into insertStore
-  store* prev;
-  string storeName;
-
-  ifstream fin("ShopInfo.csv"); //assign the csv file to fin
+  ifstream fin("ShopInfo.csv"); //open the file
   //read in from file
   if(fin.is_open())
   {
     while(getline(fin, line))//read in line by line
     {
-      sringstream ss(line); //use string stream to separate words
-      getline(ss, intersection, ',');
+      sringstream ss(line); //use string stream to separate words in that line
+      getline(ss, intersection, ','); //at each line the first word is the intersection
       counter++;//note that the first word is added
       //search the graph for "intersection"
-      //g.search(intersection);
       //to find the vertex in which the linked list will be attached
-      while(coutner > 0 && store != "NULL") //after the first word then add the words to the linked list
+      vertexOfInt = h.searchGraph(intersection);
+
+      //after the first word then add the words to the linked list until the word is NULL
+      while(coutner > 0 && store != "NULL")
       {
         getline(ss, store, ',');
         //add store to LL
-        h.insertStore(prev, storeName);
+        h.insertStore(vertexOfInt, store);
         //vertex struct in graph: name of intersection + LL
       }
     }
   }
 
-  //if the words being read in matches the word while traversing (search for that word) then add to the linked list
-  //combine first two words into 1
     cout << "Enter the street you are on that runs North to South. Use the form 'StreetNameAve' e.i. '8thAve' or 'FashionAve'." << endl;
     cin >> NSStCurr;
     cout << "Enter the street you are on that runs East to West. Use the form 'FIRST_LETTER_OF_CARINAL_DIRECTIONSTREET_NUMBER_superscript' e.i. 'W45th' or 'E31st'." << endl;
@@ -60,7 +64,7 @@ int main()
 
 
     //use the two inputs to locate the exact vetex (startV)
-
+    startV = NSStCurr + "/" + EWStCurr;
 
     cout << "Enter the street you want to go to that runs North to South. Use the form 'StreetNameAve' e.i. '8thAve' or 'FashionAve'." << endl;
     cin >> NSSt;
@@ -68,14 +72,16 @@ int main()
     cin >> EWSt;
 
     //use the two inputs to locate the exact vetex (endV)
+    endV = NSSt + "/" + EWSt;
 
+    cout << "To get to the intersection at " << NSSt << " and " << EWSt << ": " << endl;
     //find shortest path
     //inside printDirections, DijkstraAlgorithm will be run to find the shortest path possible
-    h.printDirections(NSSt, EWSt); //prints the directions to get to the final location
+    h.printDirections(startV, endV); //prints the directions to get to the final location
 
-
+    cout << "Nearby shops, restaurants, entertainment, and parks: " << endl;
     //display what is in the LL from that node
-
+    h.prints(); //DOES THIS PRINT JUST FROM THE FINAL DESTINATION???
 
   return 0;
 }
