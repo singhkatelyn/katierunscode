@@ -1,8 +1,9 @@
-#ifndef GRAPH_H
-#define GRAPH_H
+#ifndef HEADER_H
+#define HEADER_H
 
 #include <vector>
 #include <iostream>
+#include "LinkedList.hpp"
 using namespace std;
 
 struct vertex;
@@ -11,12 +12,19 @@ struct adjVertex{
     int weight;
 };
 
+struct intersection{
+  string storeName;
+  string storeType;
+  intersection* next;
+};
+
 struct vertex{
     vertex() {
         this->visited = false;
         this->color = "";
         this->distance = 0;
     }
+    intersection* head = NULL;
     string name;
     bool visited;
     string color;
@@ -28,6 +36,7 @@ struct vertex{
 class NewYork{
   private:
     vector<vertex*> vertices;
+
   public:
     void addEdge(string v1, string v2, int weight);
     void addVertex(string name);
@@ -39,6 +48,11 @@ class NewYork{
     vertex* DijkstraAlgorithm(string start, string end);
     void findStoreType(string, string);
     void printDirections(string start, string end);
+    intersection();
+    bool isEmpty();
+    void insertStore(store* previous, string storeName);
+    store* searchStore(string storeName);
+    void printStores();
 };
 
 #endif
