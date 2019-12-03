@@ -15,18 +15,18 @@ int main()
   string startV; //combine the words
   string endV; //combine the words
 
+//if user wants to keep going
+  string response = "Y";
+
 //declare an object of the LL class type
 //declare an object of Graph class type
-  Header h;
+  Header h; //SHOULD IT BE HEADER* ??
 //create graph
   h.loadVertex();
   h.loadEdges();
 
-//initialize a counter to keep track of what you're reading in from file
-  int counter = 0;
-
 //vertex of the street that the words that will be added to the LL to be passed into insertStore
-  store* vertexOfInt;
+  intersection* vertexOfInt;
 
 //declare string what you're reading in from file
   string line;
@@ -39,7 +39,9 @@ int main()
   {
     while(getline(fin, line))//read in line by line
     {
-      sringstream ss(line); //use string stream to separate words in that line
+      //initialize a counter to keep track of what you're reading in from file
+      int counter = 0;
+      stringstream ss(line); //use string stream to separate words in that line
       getline(ss, intersection, ','); //at each line the first word is the intersection
       counter++;//note that the first word is added
       //search the graph for "intersection"
@@ -47,7 +49,7 @@ int main()
       vertexOfInt = h.searchGraph(intersection);
 
       //after the first word then add the words to the linked list until the word is NULL
-      while(coutner > 0 && store != "NULL")
+      while(counter > 0 && store != "NULL")
       {
         getline(ss, store, ',');
         //add store to LL
@@ -57,6 +59,8 @@ int main()
     }
   }
 
+  while(response == "Y" || response == "N")
+  {
     cout << "Enter the street you are on that runs North to South. Use the form 'StreetNameAve' e.i. '8thAve' or 'FashionAve'." << endl;
     cin >> NSStCurr;
     cout << "Enter the street you are on that runs East to West. Use the form 'FIRST_LETTER_OF_CARINAL_DIRECTIONSTREET_NUMBER_superscript' e.i. 'W45th' or 'E31st'." << endl;
@@ -74,7 +78,7 @@ int main()
     //use the two inputs to locate the exact vetex (endV)
     endV = NSSt + "/" + EWSt;
 
-    cout << "To get to the intersection at " << NSSt << " and " << EWSt << ": " << endl;
+    cout << "Directions to the intersection at " << NSSt << " and " << EWSt << ": " << endl;
     //find shortest path
     //inside printDirections, DijkstraAlgorithm will be run to find the shortest path possible
     h.printDirections(startV, endV); //prints the directions to get to the final location
@@ -83,5 +87,18 @@ int main()
     //display what is in the LL from that node
     h.prints(); //DOES THIS PRINT JUST FROM THE FINAL DESTINATION???
 
+    cout << "Would you like to map to a different intersection? Type Y or N" << endl;
+    cin >> response;
+    if(response != "Y" || response != "y" ||response != "N" || response != "n")
+    {
+      cout << "Error: not a valid response. Please enter Y or N" << endl;
+      cin >> response;
+    }
+    if(response == "N" || response == "n")
+    {
+      cout << "Have a safe trip to the intersection of " << NSSt << " and " << EWSt << "." << endl;
+      break;
+    }
+  }
   return 0;
 }
