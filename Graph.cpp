@@ -44,16 +44,16 @@ void NewYork :: addVertex(string name){
 
 
 void NewYork :: loadVertex(){
-  addVertex("8thAve/W42nd");
-  addVertex("8thAve/W41st");
-  addVertex("8thAve/W40th");
-  addVertex("8thAve/W39th");
-  addVertex("8thAve/W38th");
-  addVertex("8thAve/W37th");
-  addVertex("8thAve/W36th");
-  addVertex("8thAve/W35th");
-  addVertex("8thAve/W34rd");
-  addVertex("8thAve/W33rd");
+  addVertex("8th/W42nd");
+  addVertex("8th/W41st");
+  addVertex("8th/W40th");
+  addVertex("8th/W39th");
+  addVertex("8th/W38th");
+  addVertex("8th/W37th");
+  addVertex("8th/W36th");
+  addVertex("8th/W35th");
+  addVertex("8th/W34rd");
+  addVertex("8th/W33rd");
   addVertex("FashionAve/W42nd");
   addVertex("FashionAve/W41st");
   addVertex("FashionAve/W40th");
@@ -304,66 +304,71 @@ void NewYork :: displayEdges(){
   }
 }
 
-void NewYork :: breadthFirstTraverse(string sourceVertex, string storeType){
-  queue<vertex*> q;
-  vertex *vStart;
-  cout<< "Starting vertex (root): " << sourceVertex << "-> "; //keep for testing
-  vertex *n;
-  for(unsigned int i = 0; i < vertices.size(); i++)
-  {
-      if(vertices[i]->name == sourceVertex)
-      {
-          vStart = vertices[i];
-      }
-  }
-  q.push(vStart);
-  vStart->visited = true;
-  store* temp;
-  temp = vStart->head;
-  while(!temp){
-    if(temp -> storeType == storeType){
-      cout << "The closest " << storeType << " is at " << sourceVertex << endl;
-      printDirections(sourceVertex, sourceVertex);
-      break;
-      //call the firections from here and end the code
-    }
-  }
-  while(!q.empty()){
-      n = q.front();
-      q.pop();
-      // go to all the adjacent vertices of n
-      for(unsigned int x = 0; x < n->adj.size(); x++)
-      {
-        if(n->adj[x].v->visited == false){
-          n->adj[x].v->visited = true;
-          n->adj[x].v->distance = n->distance + 1;
-          temp = n->adj[x].v->head;
-          while(!temp){
-            if(temp -> storeType == storeType){
-              cout << "The closest " << storeType << " is at " << n->adj[x].v->name << endl;
-              string name = n->adj[x].v->name.str();
-              printDirections(sourceVertex, n->adj[x].v->name); //this is gonna give an error
-              break;
-              //call directions and stop running the code
-            }
-          }
-          q.push(n->adj[x].v);
-          cout << n->adj[x].v->name <<"("<< n->adj[x].v->distance <<")"<< " ";
-        }
-      }
-  }
-}
+// void NewYork :: breadthFirstTraverse(string sourceVertex, string storeType){
+//   queue<vertex*> q;
+//   vertex *vStart;
+//   cout<< "Starting vertex (root): " << sourceVertex << "-> "; //keep for testing
+//   vertex *n;
+//   for(unsigned int i = 0; i < vertices.size(); i++)
+//   {
+//       if(vertices[i]->name == sourceVertex)
+//       {
+//           vStart = vertices[i];
+//       }
+//   }
+//   q.push(vStart);
+//   vStart->visited = true;
+//   store* temp;
+//   temp = vStart->head;
+//   while(!temp){
+//     if(temp -> storeType == storeType){
+//       cout << "The closest " << storeType << " is at " << sourceVertex << endl;
+//       printDirections(sourceVertex, sourceVertex);
+//       break;
+//       //call the firections from here and end the code
+//     }
+//   }
+//   while(!q.empty()){
+//       n = q.front();
+//       q.pop();
+//       // go to all the adjacent vertices of n
+//       for(unsigned int x = 0; x < n->adj.size(); x++)
+//       {
+//         if(n->adj[x].v->visited == false){
+//           n->adj[x].v->visited = true;
+//           n->adj[x].v->distance = n->distance + 1;
+//           temp = n->adj[x].v->head;
+//           while(!temp){
+//             if(temp -> storeType == storeType){
+//               cout << "The closest " << storeType << " is at " << n->adj[x].v->name << endl;
+//               string name = n->adj[x].v->name.str();
+//               printDirections(sourceVertex, n->adj[x].v->name); //this is gonna give an error
+//               break;
+//               //call directions and stop running the code
+//             }
+//           }
+//           q.push(n->adj[x].v);
+//           cout << n->adj[x].v->name <<"("<< n->adj[x].v->distance <<")"<< " ";
+//         }
+//       }
+//   }
+// }
+// void NewYork :: findStoreType(string start, string storeType){
+//   store* intersection;
+//   breadthFirstTraverse(start, storeType);
+// }
 
-/*
 vertex* NewYork :: searchGraph(string streetName){
-  find the street name and return the intersection vertex
+  //find the street name and return the intersection vertex
+  vertex* street;
+  for(unsigned int i = 0; i < vertices.size(); i++){
+      if(vertices[i]->name == streetName)
+      {
+        return street = vertices[i];
+      }
+  }
+  return 0;
 }
-
-
-*/
-
-
-
 
 vertex* NewYork::DijkstraAlgorithm(string start, string end)
 {
@@ -418,10 +423,7 @@ vertex* NewYork::DijkstraAlgorithm(string start, string end)
    return vEnd;
 }
 
-void NewYork :: findStoreType(string start, string storeType){
-  store* intersection;
-  breadthFirstTraverse(start, storeType);
-}
+
 
 void NewYork :: printDirections(string s1, string s2){
   vector<string> solvedList;
