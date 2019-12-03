@@ -4,6 +4,7 @@ using namespace std;
 
 struct store{
   string storeName;
+  string storeType;
   store *next;
 };
 
@@ -12,8 +13,8 @@ class intersection{
       store* head;
     public:
       intersection();
+      bool isEmpty();
       void insertStore(store* previous, string storeName);
-      void loadMap();
-      store* searchNetwork(string storeName);
-      void printStores;
+      store* searchStore(string storeName);
+      void printStores();
 };
