@@ -18,31 +18,31 @@ bool NewYork ::isEmpty(){
 }
 
 void NewYork::insertStore(store* previous, string storeName){
-  store* temp;
+  intersection* temp;
   if (previous == NULL){
     cout << "adding: " << storeName << " (HEAD)" << endl; //comment out after testing is done
     temp = head;
-    head = new store;
+    head = new intersection;
     head -> name = storeName;
     head -> next = temp;
   }
   else if (head == NULL){
     cout << "adding: " << storeName << " (HEAD)" << endl; //comment out after testing is done
-    head = new store;
+    head = new intersection;
     head -> name = storeName;
     head -> next = NULL;
   }
   else{
     cout << "adding: " << storeName << " (prev: " << previous -> name << ")" << endl; //comment out after testing is done
-    temp = new store;
+    temp = new intersection;
     temp -> next = previous -> next; //a to c now b to c
     previous -> next = temp; //a to b
     temp -> name = storeName; //fill
   }
 }
 
-Store* NewYork::searchStore(string storeName){
-  Country *craweler = head;
+intersection* NewYork::searchStore(string storeName){
+  intersection *craweler = head;
 	while(craweler != NULL){
     if(craweler -> name == storeName){
       return craweler;
@@ -53,7 +53,7 @@ Store* NewYork::searchStore(string storeName){
 }
 
 void NewYork::printStores() {
-  store*temp = head;
+  intersection*temp = head;
   int counter = 0;
   if(temp == NULL){
     cout << "nothing in path" << endl;
@@ -79,7 +79,7 @@ void NewYork::addEdge(string v1, string v2, int num){
                     av2.v = vertices[i];
                     av2.weight = num;
                     vertices[j]->adj.push_back(av2);
-                }
+                } 
             }
         }
     }
