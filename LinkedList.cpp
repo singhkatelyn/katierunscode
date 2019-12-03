@@ -1,19 +1,19 @@
-#include "LinkedList.hpp"
+#include "Header.hpp"
 using namespace std;
 
 
-intersection :: intersection(){
+NewYork :: intersection(){
   head = NULL;
 }
 
-bool intersection ::isEmpty(){
+bool NewYork ::isEmpty(){
   if(head == NULL){
     return true;
   }
   return false;
 }
 
-void intersection::insertStore(store* previous, string storeName){
+void NewYork::insertStore(store* previous, string storeName){
   store* temp;
   if (previous == NULL){
     cout << "adding: " << storeName << " (HEAD)" << endl; //comment out after testing is done
@@ -37,7 +37,7 @@ void intersection::insertStore(store* previous, string storeName){
   }
 }
 
-Store* intersection::searchStore(string storeName){
+Store* NewYork::searchStore(string storeName){
   Country *craweler = head;
 	while(craweler != NULL){
     if(craweler -> name == storeName){
@@ -48,7 +48,7 @@ Store* intersection::searchStore(string storeName){
   return NULL;
 }
 
-void intersection::printStores() {
+void NewYork::printStores() {
   store*temp = head;
   int counter = 0;
   if(temp == NULL){
