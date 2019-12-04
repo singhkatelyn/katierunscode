@@ -24,28 +24,29 @@ void printStreetNames(){
    {"8thAve/W39th", "FashionAve/W39th", "6thAve/W39th", "5thAve/E39th", "MadisonAve/E39th", "ParkAve/E39th", "LexingtonAve/E39th", "3rdAve/E39th"},
     {"8thAve/W38th", "FashionAve/W38th", "6thAve/W38th", "5thAve/E38th", "MadisonAve/E38th", "ParkAve/E38th", "LexingtonAve/E38th", "3rdAve/E38th"},
      {"8thAve/W37th", "FashionAve/W37th", "6thAve/W37th", "5thAve/E37th", "MadisonAve/E37th", "ParkAve/E37th", "LexingtonAve/E37th", "3rdAve/E37th"},
+     {"8thAve/W36th", "FashionAve/W36th", "6thAve/W36th", "5thAve/E36th", "MadisonAve/E36th", "ParkAve/E36th", "LexingtonAve/E36th", "3rdAve/E36th"},
       {"8thAve/W35th", "FashionAve/W35th", "6thAve/W35th", "5thAve/E35th", "MadisonAve/E35th", "ParkAve/E35th", "LexingtonAve/E35th", "3rdAve/E35th"},
        {"8thAve/W34th", "FashionAve/W34th", "6thAve/W34th", "5thAve/E34th", "MadisonAve/E34th", "ParkAve/E34th", "LexingtonAve/E34th", "3rdAve/E34th"},
         {"8thAve/W33rd", "FashionAve/W33rd", "6thAve/W33rd", "5thAve/E33rd", "MadisonAve/E33rd", "ParkAve/E33rd", "LexingtonAve/E33rd", "3rdAve/E33rd"}};
-  for(int i = 0; i < 9; i++){
+  for(int i = 0; i < 10; i++){
     for(int j = 0; j < 8; j++){
       cout << streets[i][j];
-      if(j!=7 && i != 9){
+      if(j!=7 && i != 10){
         cout << "-->";
       }
-      if(j == 9){
+      if(j == 10){
         cout << endl;
       }
     }
     cout << endl;
-    if(i != 8){
-      for(int i = 0; i < 8; i++){
+    if(i != 9){
+      for(int i = 0; i < 9; i++){
         cout << " |               ";
         if(i == 7){
           cout << endl;
         }
       }
-      for(int i = 0; i < 8; i++){
+      for(int i = 0; i < 9; i++){
         cout << " V               ";
         if(i == 7){
           cout << endl;
@@ -56,6 +57,8 @@ void printStreetNames(){
   cout << endl;
   cout << endl;
 }
+
+
 
 int main()
 {
@@ -150,7 +153,8 @@ int main()
     //find shortest path
     //inside printDirections, DijkstraAlgorithm will be run to find the shortest path possible
     cout << endl;
-    h.printDirections(startV, endV); //prints the directions to get to the final location
+    vector<string> solved = h.printDirections(startV, endV); //prints the directions to get to the final location
+    h.printDirectionsOnly(solved);
     cout << endl;
     cout << "Nearby shops, restaurants, entertainment, and parks: " << endl;
     //display what is in the LL from that node
