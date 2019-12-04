@@ -13,7 +13,7 @@ struct adjVertex{
 
 struct intersection{
   string storeName;
-  string storeType;
+  //string storeType;
   intersection* next;
 };
 
@@ -49,9 +49,8 @@ class NewYork{
     void findStoreType(string, string);
     void printDirections(string start, string end);
     bool isEmpty();
-    void insertStore(intersection* previous, string storeName);
-    intersection* updatePrev(intersection* prev, string storeName);
-    store* searchStore(string storeName);
+    intersection* insertStore(intersection* previous, string storeName);
+    intersection* searchStore(string storeName);
     void printStores();
 };
 
