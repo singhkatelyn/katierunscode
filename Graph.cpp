@@ -17,34 +17,34 @@ bool NewYork ::isEmpty(){
   return false;
 }
 
-void NewYork::insertStore(store* previous, string storeName){
+void NewYork::insertStore(intersection* previous, string storeName){
   intersection* temp;
   if (previous == NULL){
     cout << "adding: " << storeName << " (HEAD)" << endl; //comment out after testing is done
     temp = head;
     head = new intersection;
-    head -> name = storeName;
+    head -> storeName = storeName;
     head -> next = temp;
   }
   else if (head == NULL){
     cout << "adding: " << storeName << " (HEAD)" << endl; //comment out after testing is done
     head = new intersection;
-    head -> name = storeName;
+    head -> storeName = storeName;
     head -> next = NULL;
   }
   else{
-    cout << "adding: " << storeName << " (prev: " << previous -> name << ")" << endl; //comment out after testing is done
+    cout << "adding: " << storeName << " (prev: " << previous -> storeName << ")" << endl; //comment out after testing is done
     temp = new intersection;
     temp -> next = previous -> next; //a to c now b to c
     previous -> next = temp; //a to b
-    temp -> name = storeName; //fill
+    temp -> storeName = storeName; //fill
   }
 }
 
 intersection* NewYork::searchStore(string storeName){
   intersection *craweler = head;
 	while(craweler != NULL){
-    if(craweler -> name == storeName){
+    if(craweler -> storeName == storeName){
       return craweler;
     }
 		craweler = craweler -> next;
@@ -59,7 +59,7 @@ void NewYork::printStores() {
     cout << "nothing in path" << endl;
   }
 	while(temp != NULL){
-		cout << counter << ". " << temp -> name << endl;
+		cout << counter << ". " << temp -> storeName << endl;
     counter++;
   cout << "===" << endl;
 }
@@ -79,7 +79,7 @@ void NewYork::addEdge(string v1, string v2, int num){
                     av2.v = vertices[i];
                     av2.weight = num;
                     vertices[j]->adj.push_back(av2);
-                } 
+                }
             }
         }
     }
@@ -428,7 +428,7 @@ vertex* NewYork :: searchGraph(string streetName){
   return 0;
 }
 
-void NewYork::insertStore(store* previous, string storeName){
+void NewYork::insertStore(intersection* previous, string storeName){
   intersection* temp;
   if (previous == NULL){
     cout << "adding: " << storeName << " (HEAD)" << endl; //comment out after testing is done
