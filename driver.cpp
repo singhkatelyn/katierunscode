@@ -18,7 +18,7 @@ void printStreetNames(){
   // string threeFive[8] = {"8thAve/W35th", "FashionAve/W35th", "6thAve/W35th", "5thAve/E35th", "MadisonAve/E35th", "ParkAve/E35th", "LexingtonAve/E35th", "3rdAve/E35th"};
   // string threeFour[8] = {"8thAve/W34th", "FashionAve/W34th", "6thAve/W34th", "5thAve/E34th", "MadisonAve/E34th", "ParkAve/E34th", "LexingtonAve/E34th", "3rdAve/E34th"};
   // string threeThree[8] = {"8thAve/W33rd", "FashionAve/W33rd", "6thAve/W33rd", "5thAve/E33rd", "MadisonAve/E33rd", "ParkAve/E33rd", "LexingtonAve/E33rd", "3rdAve/E33rd"};
-  string streets[9][8] = {{"8thAve/W42nd", "FashionAve/W42nd", "6thAve/W42nd", "5thAve/E42nd", "MadisonAve/E42nd", "ParkAve/E42nd", "LexingtonAve/E42nd", "3rdAve/E42nd"},
+  string streets[10][8] = {{"8thAve/W42nd", "FashionAve/W42nd", "6thAve/W42nd", "5thAve/E42nd", "MadisonAve/E42nd", "ParkAve/E42nd", "LexingtonAve/E42nd", "3rdAve/E42nd"},
    {"8thAve/W41st", "FashionAve/W41st", "6thAve/W41st", "5thAve/E41st", "MadisonAve/E41st", "ParkAve/E41st", "LexingtonAve/E41st", "3rdAve/E41st"},
    {"8thAve/W40th", "FashionAve/W40th", "6thAve/W40th", "5thAve/E40th", "MadisonAve/E40th", "ParkAve/E40th", "LexingtonAve/E40th", "3rdAve/E40th"},
    {"8thAve/W39th", "FashionAve/W39th", "6thAve/W39th", "5thAve/E39th", "MadisonAve/E39th", "ParkAve/E39th", "LexingtonAve/E39th", "3rdAve/E39th"},
@@ -32,26 +32,32 @@ void printStreetNames(){
     for(int j = 0; j < 8; j++){
       cout << streets[i][j];
       if(j!=7 && i != 10){
-        cout << "-->";
+        cout << "<->";
       }
-      if(j == 10){
+      if(j == 9){
         cout << endl;
       }
     }
     cout << endl;
     if(i != 9){
-      for(int i = 0; i < 9; i++){
-        cout << " |               ";
+      for(int i = 0; i < 8; i++){
+        cout << "  |               ";
         if(i == 7){
           cout << endl;
         }
       }
-      for(int i = 0; i < 9; i++){
-        cout << " V               ";
+      for(int i = 0; i < 8; i++){
+        cout << "  |               ";
         if(i == 7){
           cout << endl;
         }
       }
+      //for(int i = 0; i < 8; i++){
+      //   cout << " V               ";
+      //   if(i == 7){
+      //     cout << endl;
+      //   }
+      // }
     }
   }
   cout << endl;
@@ -163,17 +169,24 @@ int main()
     cout << endl;
     cout << "Would you like to map to a different intersection? Type Y or N" << endl;
     cin >> response;
-    if(response != "Y" || response != "y" ||response != "N" || response != "n")
-    {
-      if(response == "N" || response == "n")
+    while(response != "Y" || response != "y" ||response != "N" || response != "n"){
+      if(response == "Y" || response == "y" ||response == "N" || response == "n")
       {
-        cout << "Have a safe trip to the intersection of " << NSSt << " and " << EWSt << "." << endl;
-        break;
+        if(response == "Y" || response == "y")
+        {
+          main();
+        }
+        if(response == "N" || response == "n")
+        {
+          cout << "Have a safe trip."<< endl;
+          break;
+        }
       }
-      cout << "Error: not a valid response. Please enter Y or N" << endl;
-      cin >> response;
+      else{
+        cout << "Error: not a valid response. Please enter Y or N" << endl;
+        cin >> response;
+      }
     }
-
   }
   return 0;
 }
