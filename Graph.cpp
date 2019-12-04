@@ -429,27 +429,12 @@ vertex* NewYork :: searchGraph(string streetName){
   return 0;
 }
 
-void NewYork::insertStore(intersection* previous, string storeName){
-  intersection* temp;
-  if (previous == NULL){
-    cout << "adding: " << storeName << " (HEAD)" << endl; //comment out after testing is done
-    temp = head;
-    head = new intersection;
-    head -> name = storeName;
-    head -> next = temp;
-  }
-  else if (head == NULL){
-    cout << "adding: " << storeName << " (HEAD)" << endl; //comment out after testing is done
-    head = new intersection;
-    head -> name = storeName;
-    head -> next = NULL;
-  }
-  else{
-    cout << "adding: " << storeName << " (prev: " << previous -> name << ")" << endl; //comment out after testing is done
-    temp = new intersection;
-    temp -> next = previous -> next; //a to c now b to c
-    previous -> next = temp; //a to b
-    temp -> name = storeName; //fill
+intersection* NewYork :: updatePrev(intersection* prev, string storeName){
+  for(unsigned int i = 0; i < vertices.size(); i++){
+      if(vertices[i]->name == storeName)
+      {
+        return prev = vertices[i];
+      }
   }
 }
 
