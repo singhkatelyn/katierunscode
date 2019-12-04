@@ -563,40 +563,49 @@ string tempstreet = "";
           tempstreet = solved[k];
         }
       }
-      if(streets[i][j] == tempstreet)
-      {
-        cout << termcolor::green << tempstreet;
+      if(streets[i][j] == tempstreet){
+        if(tempstreet == solved[0] || tempstreet == solved[solved.size()-1])
+        {
+          cout << termcolor::cyan << tempstreet;
+        }
+        else{
+          cout << termcolor::green << tempstreet;
+        }
+
       }
       else
       {
         cout << termcolor ::red << streets[i][j];
       }
-
-
-
       if(j!=7 && i != 10){
         cout<< termcolor :: white;
-         cout << "-->";
+         cout << "<->";
       }
-      if(j == 10){
+      if(j == 9){
         cout << endl;
       }
     }
     cout << termcolor:: white;
     cout << endl;
-    if(i != 8){
-      for(int i = 0; i < 10; i++){
-        cout << " |               ";
+    if(i != 9){
+      for(int i = 0; i < 8; i++){
+        cout << "  |               ";
         if(i == 7){
           cout << endl;
         }
       }
-      for(int i = 0; i < 10; i++){
-        cout << " V               ";
+      for(int i = 0; i < 8; i++){
+        cout << "  |               ";
         if(i == 7){
           cout << endl;
         }
       }
+      // for(int i = 0; i < 8; i++){
+      //   cout << " V               ";
+      //   if(i == 7){
+      //     cout << endl;
+      //   }
+      // }
     }
   }
   cout << termcolor :: white << endl;
