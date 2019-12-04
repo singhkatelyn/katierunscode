@@ -47,7 +47,8 @@ class NewYork{
     vertex* searchGraph(string);
     vertex* DijkstraAlgorithm(string start, string end);
     void findStoreType(string, string);
-    void printDirections(string start, string end);
+    vector<string> printDirections(string start, string end);
+    void printDirectionsOnly(vector<string>);
     bool isEmpty();
     intersection* insertStore(intersection* previous, string storeName);
     intersection* searchStore(string storeName);
