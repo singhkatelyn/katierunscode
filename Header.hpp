@@ -23,7 +23,6 @@ struct vertex{
         this->color = "";
         this->distance = 0;
     }
-    intersection* head = NULL;
     string name;
     bool visited;
     string color;
@@ -34,22 +33,24 @@ struct vertex{
 
 class NewYork{
   private:
+    intersection* head;
     vector<vertex*> vertices;
 
   public:
+    NewYork();
     void addEdge(string v1, string v2, int weight);
     void addVertex(string name);
     void loadVertex();
     void loadEdges();
     void displayEdges(); //use this only for testing
     // void breadthFirstTraverse(string sourceVertex, string);
-    vertex* searchGraph(string streetName);
+    vertex* searchGraph(string);
     vertex* DijkstraAlgorithm(string start, string end);
     void findStoreType(string, string);
     void printDirections(string start, string end);
-    intersection();
     bool isEmpty();
-    void insertStore(store* previous, string storeName);
+    void insertStore(intersection* previous, string storeName);
+    intersection* updatePrev(intersection* prev, string storeName);
     store* searchStore(string storeName);
     void printStores();
 };
