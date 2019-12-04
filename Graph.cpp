@@ -1,5 +1,6 @@
 #include "Header.hpp"
 #include <iostream>
+#include "termcolor.hpp"
 #include <vector>
 #include <climits>
 
@@ -123,7 +124,7 @@ void NewYork :: loadVertex(){
   addVertex("8thAve/W37th");
   addVertex("8thAve/W36th");
   addVertex("8thAve/W35th");
-  addVertex("8thAve/W34rd");
+  addVertex("8thAve/W34th");
   addVertex("8thAve/W33rd");
   addVertex("FashionAve/W42nd");
   addVertex("FashionAve/W41st");
@@ -145,16 +146,16 @@ void NewYork :: loadVertex(){
   addVertex("6thAve/W35th");
   addVertex("6thAve/W34th");
   addVertex("6thAve/W33rd");
-  addVertex("5thAve/W42nd");
-  addVertex("5thAve/W41st");
-  addVertex("5thAve/W40th");
-  addVertex("5thAve/W39th");
-  addVertex("5thAve/W38th");
-  addVertex("5thAve/W37th");
-  addVertex("5thAve/W36th");
-  addVertex("5thAve/W35th");
-  addVertex("5thAve/W34th");
-  addVertex("5thAve/W33rd");
+  // addVertex("5thAve/W42nd");
+  // addVertex("5thAve/W41st");
+  // addVertex("5thAve/W40th");
+  // addVertex("5thAve/W39th");
+  // addVertex("5thAve/W38th");
+  // addVertex("5thAve/W37th");
+  // addVertex("5thAve/W36th");
+  // addVertex("5thAve/W35th");
+  // addVertex("5thAve/W34th");
+  // addVertex("5thAve/W33rd");
   addVertex("5thAve/E42nd");
   addVertex("5thAve/E41st");
   addVertex("5thAve/E40th");
@@ -247,35 +248,35 @@ void NewYork :: loadEdges(){
   addEdge("FashionAve/W34th","6thAve/W34th", rand() % 10 + 1);
   addEdge("FashionAve/W34th","FashionAve/W33rd", rand() % 10 + 1);
   addEdge("FashionAve/W33rd","6thAve/W33rd", rand() % 10 + 1);
-  addEdge("6thAve/W42nd", "5thAve/W42nd", rand() % 10 + 1);
+  addEdge("6thAve/W42nd", "5thAve/E42nd", rand() % 10 + 1);
   addEdge("6thAve/W42nd", "6thAve/W41st", rand() % 10 + 1);
-  addEdge("6thAve/W41st", "5thAve/W41st", rand() % 10 + 1);
+  addEdge("6thAve/W41st", "5thAve/E41st", rand() % 10 + 1);
   addEdge("6thAve/W41st", "6thAve/W40th", rand() % 10 + 1);
-  addEdge("6thAve/W40th", "5thAve/W40th", rand() % 10 + 1);
+  addEdge("6thAve/W40th", "5thAve/E40th", rand() % 10 + 1);
   addEdge("6thAve/W40th", "6thAve/W39th", rand() % 10 + 1);
-  addEdge("6thAve/W39th", "5thAve/W39th", rand() % 10 + 1);
+  addEdge("6thAve/W39th", "5thAve/E39th", rand() % 10 + 1);
   addEdge("6thAve/W39th", "6thAve/W38th", rand() % 10 + 1);
-  addEdge("6thAve/W38th", "5thAve/W38th", rand() % 10 + 1);
+  addEdge("6thAve/W38th", "5thAve/E38th", rand() % 10 + 1);
   addEdge("6thAve/W38th", "6thAve/W37th", rand() % 10 + 1);
-  addEdge("6thAve/W37th", "5thAve/W37th", rand() % 10 + 1);
+  addEdge("6thAve/W37th", "5thAve/E37th", rand() % 10 + 1);
   addEdge("6thAve/W37th", "6thAve/W36th", rand() % 10 + 1);
-  addEdge("6thAve/W36th", "5thAve/W36th", rand() % 10 + 1);
+  addEdge("6thAve/W36th", "5thAve/E36th", rand() % 10 + 1);
   addEdge("6thAve/W36th", "6thAve/W35th", rand() % 10 + 1);
-  addEdge("6thAve/W35th", "5thAve/W35th", rand() % 10 + 1);
+  addEdge("6thAve/W35th", "5thAve/E35th", rand() % 10 + 1);
   addEdge("6thAve/W35th", "6thAve/W34th", rand() % 10 + 1);
-  addEdge("6thAve/W34th", "5thAve/W34th", rand() % 10 + 1);
+  addEdge("6thAve/W34th", "5thAve/E34th", rand() % 10 + 1);
   addEdge("6thAve/W34th", "6thAve/W33rd", rand() % 10 + 1);
-  addEdge("6thAve/W33rd", "5thAve/W33rd", rand() % 10 + 1);
-  addEdge("5thAve/W42nd","5thAve/E42nd", 0); //connects the east and west streets together, this is actually supposed to be 1 node so that is why the weight is 0
-  addEdge("5thAve/W41st","5thAve/E41st", 0);
-  addEdge("5thAve/W40th","5thAve/E40th", 0);
-  addEdge("5thAve/W39th","5thAve/E39th", 0);
-  addEdge("5thAve/W38th","5thAve/E38th", 0);
-  addEdge("5thAve/W37th","5thAve/E37th", 0);
-  addEdge("5thAve/W36th","5thAve/E36th", 0);
-  addEdge("5thAve/W35th","5thAve/E35th", 0);
-  addEdge("5thAve/W34th","5thAve/E34th", 0);
-  addEdge("5thAve/W33th","5thAve/E33th", 0);
+  addEdge("6thAve/W33rd", "5thAve/E33rd", rand() % 10 + 1);
+  // addEdge("5thAve/W42nd","5thAve/E42nd", 0); //connects the east and west streets together, this is actually supposed to be 1 node so that is why the weight is 0
+  // addEdge("5thAve/W41st","5thAve/E41st", 0);
+  // addEdge("5thAve/W40th","5thAve/E40th", 0);
+  // addEdge("5thAve/W39th","5thAve/E39th", 0);
+  // addEdge("5thAve/W38th","5thAve/E38th", 0);
+  // addEdge("5thAve/W37th","5thAve/E37th", 0);
+  // addEdge("5thAve/W36th","5thAve/E36th", 0);
+  // addEdge("5thAve/W35th","5thAve/E35th", 0);
+  // addEdge("5thAve/W34th","5thAve/E34th", 0);
+  // addEdge("5thAve/W33th","5thAve/E33th", 0);
   addEdge("5thAve/E42nd", "MadisonAve/E42nd", rand() % 10 + 1);
   addEdge("5thAve/E42nd", "5thAve/E41st", rand() % 10 + 1);
   addEdge("5thAve/E41st", "MadisonAve/E41st", rand() % 10 + 1);
@@ -489,7 +490,7 @@ vertex* NewYork::DijkstraAlgorithm(string start, string end)
 
 
 
-void NewYork :: printDirections(string s1, string s2){
+vector<string> NewYork :: printDirections(string s1, string s2){
   vector<string> solvedList;
   vertex* n = DijkstraAlgorithm(s1, s2);
   while(n->name != s1){
@@ -497,17 +498,107 @@ void NewYork :: printDirections(string s1, string s2){
     n = n-> pred;
   }
   solvedList.push_back(s1);
-  int counter = 0;
-  for(unsigned int x = solvedList.size(); x > 0; x--){
-    if(counter == 0){
-        cout << s1 << " ";
-        counter++;
-        x--;
-    }
-    else{
-      cout << solvedList[x] << " ";
-    }
+  return solvedList;
+  // int counter = 0;
+  // for(unsigned int x = solvedList.size(); x > 0; x--){
+  //   if(counter == 0){
+  //       //cout << s1 << " ";
+  //       //cout << "--> ";
+  //       counter++;
+  //       x--;
+  //   }
+  //   else{
+  //     cout << solvedList[x] << " ";
+  //     cout << "--> ";
+  //   }
+  //
+  // }
+  // cout << s2 << endl;
+}
 
+void NewYork :: printDirectionsOnly(vector<string> solved){
+  // string fourTwo[8] = {"8thAve/W42nd", "FashionAve/W42nd", "6thAve/W42nd", "5thAve/E42nd", "MadisonAve/E42nd", "ParkAve/E42nd", "LexingtonAve/E42nd", "3rdAve/E42nd"};
+  // string fourOne[8] = {"8thAve/W41st", "FashionAve/W41st", "6thAve/W41st", "5thAve/E41st", "MadisonAve/E41st", "ParkAve/E41st", "LexingtonAve/E41st", "3rdAve/E41st"};
+  // string fourZero[8] = {"8thAve/W40th", "FashionAve/W40th", "6thAve/W40th", "5thAve/E40th", "MadisonAve/E40th", "ParkAve/E40th", "LexingtonAve/E40th", "3rdAve/E40th"};
+  // string threeNine[8] = {"8thAve/W39th", "FashionAve/W39th", "6thAve/W39th", "5thAve/E39th", "MadisonAve/E39th", "ParkAve/E39th", "LexingtonAve/E39th", "3rdAve/E39th"};
+  // string threeEight[8] = {"8thAve/W38th", "FashionAve/W38th", "6thAve/W38th", "5thAve/E38th", "MadisonAve/E38th", "ParkAve/E38th", "LexingtonAve/E38th", "3rdAve/E38th"};
+  // string threeSeven[8] = {"8thAve/W37th", "FashionAve/W37th", "6thAve/W37th", "5thAve/E37th", "MadisonAve/E37th", "ParkAve/E37th", "LexingtonAve/E37th", "3rdAve/E37th"};
+  // string threeSix[8] = {"8thAve/W36th", "FashionAve/W36th", "6thAve/W36th", "5thAve/E36th", "MadisonAve/E36th", "ParkAve/E36th", "LexingtonAve/E36th", "3rdAve/E36th"};
+  // string threeFive[8] = {"8thAve/W35th", "FashionAve/W35th", "6thAve/W35th", "5thAve/E35th", "MadisonAve/E35th", "ParkAve/E35th", "LexingtonAve/E35th", "3rdAve/E35th"};
+  // string threeFour[8] = {"8thAve/W34th", "FashionAve/W34th", "6thAve/W34th", "5thAve/E34th", "MadisonAve/E34th", "ParkAve/E34th", "LexingtonAve/E34th", "3rdAve/E34th"};
+  // string threeThree[8] = {"8thAve/W33rd", "FashionAve/W33rd", "6thAve/W33rd", "5thAve/E33rd", "MadisonAve/E33rd", "ParkAve/E33rd", "LexingtonAve/E33rd", "3rdAve/E33rd"};
+  string streets[10][8] = {{"8thAve/W42nd", "FashionAve/W42nd", "6thAve/W42nd", "5thAve/E42nd", "MadisonAve/E42nd", "ParkAve/E42nd", "LexingtonAve/E42nd", "3rdAve/E42nd"},
+   {"8thAve/W41st", "FashionAve/W41st", "6thAve/W41st", "5thAve/E41st", "MadisonAve/E41st", "ParkAve/E41st", "LexingtonAve/E41st", "3rdAve/E41st"},
+   {"8thAve/W40th", "FashionAve/W40th", "6thAve/W40th", "5thAve/E40th", "MadisonAve/E40th", "ParkAve/E40th", "LexingtonAve/E40th", "3rdAve/E40th"},
+   {"8thAve/W39th", "FashionAve/W39th", "6thAve/W39th", "5thAve/E39th", "MadisonAve/E39th", "ParkAve/E39th", "LexingtonAve/E39th", "3rdAve/E39th"},
+    {"8thAve/W38th", "FashionAve/W38th", "6thAve/W38th", "5thAve/E38th", "MadisonAve/E38th", "ParkAve/E38th", "LexingtonAve/E38th", "3rdAve/E38th"},
+     {"8thAve/W37th", "FashionAve/W37th", "6thAve/W37th", "5thAve/E37th", "MadisonAve/E37th", "ParkAve/E37th", "LexingtonAve/E37th", "3rdAve/E37th"},
+     {"8thAve/W36th", "FashionAve/W36th", "6thAve/W36th", "5thAve/E36th", "MadisonAve/E36th", "ParkAve/E36th", "LexingtonAve/E36th", "3rdAve/E36th"},
+      {"8thAve/W35th", "FashionAve/W35th", "6thAve/W35th", "5thAve/E35th", "MadisonAve/E35th", "ParkAve/E35th", "LexingtonAve/E35th", "3rdAve/E35th"},
+       {"8thAve/W34th", "FashionAve/W34th", "6thAve/W34th", "5thAve/E34th", "MadisonAve/E34th", "ParkAve/E34th", "LexingtonAve/E34th", "3rdAve/E34th"},
+        {"8thAve/W33rd", "FashionAve/W33rd", "6thAve/W33rd", "5thAve/E33rd", "MadisonAve/E33rd", "ParkAve/E33rd", "LexingtonAve/E33rd", "3rdAve/E33rd"}};
+
+string tempstreet = "";
+
+  for(int i = 0; i < 10; i++){
+    for(int j = 0; j < 8; j++){
+      // for(int k = 0; k < solved.size(); k++){
+      // if(streets[i][j] == solved[k]){
+      //   cout << termcolor::green << streets[i][j];
+      // }
+      // else{
+      //   cout << termcolor ::red << streets[i][j];
+      // }
+      // if(j!=7 && i != 9){
+      //   cout<< termcolor :: white;
+      //    cout << "-->";
+      // }
+      // if(j == 9){
+      //   cout << endl;
+      // }
+      //
+      // }
+      for(int k = 0; k <= solved.size(); k++){
+        if(streets[i][j] == solved[k]){
+          tempstreet = solved[k];
+        }
+      }
+      if(streets[i][j] == tempstreet)
+      {
+        cout << termcolor::green << tempstreet;
+      }
+      else
+      {
+        cout << termcolor ::red << streets[i][j];
+      }
+
+
+
+      if(j!=7 && i != 10){
+        cout<< termcolor :: white;
+         cout << "-->";
+      }
+      if(j == 10){
+        cout << endl;
+      }
+    }
+    cout << termcolor:: white;
+    cout << endl;
+    if(i != 8){
+      for(int i = 0; i < 10; i++){
+        cout << " |               ";
+        if(i == 7){
+          cout << endl;
+        }
+      }
+      for(int i = 0; i < 10; i++){
+        cout << " V               ";
+        if(i == 7){
+          cout << endl;
+        }
+      }
+    }
   }
-  cout << s2 << endl;
+  cout << termcolor :: white << endl;
+  cout << endl;
 }
