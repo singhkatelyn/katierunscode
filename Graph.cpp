@@ -52,7 +52,7 @@ intersection* NewYork::searchStore(string storeName){
   return NULL;
 }
 
-void NewYork::printStores() {
+void NewYork::printStores(){
   intersection*temp = head;
   int counter = 0;
   if(temp == NULL){
@@ -62,6 +62,7 @@ void NewYork::printStores() {
 		cout << counter << ". " << temp -> storeName << endl;
     counter++;
   cout << "===" << endl;
+  }
 }
 
 
