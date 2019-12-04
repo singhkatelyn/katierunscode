@@ -2,6 +2,7 @@
 #include <vector>
 #include <sstream>
 #include "Header.hpp"
+#include<fstream>
 #include<string>
 using namespace std;
 
@@ -20,20 +21,22 @@ int main()
 
 //declare an object of the LL class type
 //declare an object of Graph class type
-  Header h; //SHOULD IT BE HEADER* ??
+  NewYork h; //SHOULD IT BE HEADER* ??
 //create graph
   h.loadVertex();
   h.loadEdges();
-
+  //h.displayEdges(); used for testing no longer needed
 //vertex of the street that the words that will be added to the LL to be passed into insertStore
-  intersection* vertexOfInt;
+  vertex* vertexOfInt;
+
 
 //declare string what you're reading in from file
   string line;
   string store;
-  string intersection;
+  string street;
 
-  ifstream fin("ShopInfo.csv"); //open the file
+  ifstream fin;
+  fin.open("ShopInfo.csv"); //open the file
   //read in from file
   if(fin.is_open())
   {
@@ -42,22 +45,28 @@ int main()
       //initialize a counter to keep track of what you're reading in from file
       int counter = 0;
       stringstream ss(line); //use string stream to separate words in that line
-      getline(ss, intersection, ','); //at each line the first word is the intersection
+      getline(ss, street, ','); //at each line the first word is the intersection
       counter++;//note that the first word is added
       //search the graph for "intersection"
       //to find the vertex in which the linked list will be attached
-      vertexOfInt = h.searchGraph(intersection);
+      vertexOfInt = h.searchGraph(street);
 
+      intersection* previous = NULL;
       //after the first word then add the words to the linked list until the word is NULL
-      while(counter > 0 && store != "NULL")
+      while(getline(ss, store, ',') && counter > 0 && store != "NULL")
       {
-        getline(ss, store, ',');
-        //add store to LL
-        h.insertStore(vertexOfInt, store);
+        if(store == "NULL"){
+          break;
+        }
+        previous = h.insertStore(previous, store);
+        //h.updatePrev(previous, store);
         //vertex struct in graph: name of intersection + LL
       }
     }
   }
+  fin.close();
+
+  cout << "Welcome to Map-A-Small-Section-of-Manhattan. This only works if you are in and would like to go to anywhere between 34rd-8th Avenue and 42nd-33rd Street " << endl;
 
   while(response == "Y" || response == "y")
   {
@@ -85,7 +94,7 @@ int main()
 
     cout << "Nearby shops, restaurants, entertainment, and parks: " << endl;
     //display what is in the LL from that node
-    h.prints(); //DOES THIS PRINT JUST FROM THE FINAL DESTINATION???
+    h.printStores(); //DOES THIS PRINT JUST FROM THE FINAL DESTINATION???
 
     cout << "Would you like to map to a different intersection? Type Y or N" << endl;
     cin >> response;
