@@ -17,28 +17,29 @@ bool NewYork ::isEmpty(){
   return false;
 }
 
-void NewYork::insertStore(intersection* previous, string storeName){
+intersection* NewYork::insertStore(intersection* previous, string storeName){
   intersection* temp;
   if (previous == NULL){
-    cout << "adding: " << storeName << " (HEAD)" << endl; //comment out after testing is done
+    //cout << "adding: " << storeName << " (HEAD)" << endl; //comment out after testing is done
     temp = head;
     head = new intersection;
     head -> storeName = storeName;
     head -> next = temp;
   }
   else if (head == NULL){
-    cout << "adding: " << storeName << " (HEAD)" << endl; //comment out after testing is done
+    //cout << "adding: " << storeName << " (HEAD)" << endl; //comment out after testing is done
     head = new intersection;
     head -> storeName = storeName;
     head -> next = NULL;
   }
   else{
-    cout << "adding: " << storeName << " (prev: " << previous -> storeName << ")" << endl; //comment out after testing is done
+    //cout << "adding: " << storeName << " (prev: " << previous -> storeName << ")" << endl; //comment out after testing is done
     temp = new intersection;
     temp -> next = previous -> next; //a to c now b to c
     previous -> next = temp; //a to b
     temp -> storeName = storeName; //fill
   }
+  return temp;
 }
 
 intersection* NewYork::searchStore(string storeName){
@@ -101,18 +102,29 @@ void NewYork :: addVertex(string name){
     }
 }
 
+void NewYork::displayEdges(){
+  for(unsigned int x=0; x < vertices.size(); x++){
+    cout << vertices[x]->name << " --> ";
+      //access all of the cities connected to vertices[i]
+       for(unsigned int j = 0; j < vertices[x]->adj.size(); j++){
+         cout << vertices[x]->adj[j].v->name << " "; // print each one
+       }
+       cout << endl;
+  }
+}
+
 
 void NewYork :: loadVertex(){
-  addVertex("8th/W42nd");
-  addVertex("8th/W41st");
-  addVertex("8th/W40th");
-  addVertex("8th/W39th");
-  addVertex("8th/W38th");
-  addVertex("8th/W37th");
-  addVertex("8th/W36th");
-  addVertex("8th/W35th");
-  addVertex("8th/W34rd");
-  addVertex("8th/W33rd");
+  addVertex("8thAve/W42nd");
+  addVertex("8thAve/W41st");
+  addVertex("8thAve/W40th");
+  addVertex("8thAve/W39th");
+  addVertex("8thAve/W38th");
+  addVertex("8thAve/W37th");
+  addVertex("8thAve/W36th");
+  addVertex("8thAve/W35th");
+  addVertex("8thAve/W34rd");
+  addVertex("8thAve/W33rd");
   addVertex("FashionAve/W42nd");
   addVertex("FashionAve/W41st");
   addVertex("FashionAve/W40th");
@@ -196,25 +208,25 @@ void NewYork :: loadVertex(){
 }
 
 void NewYork :: loadEdges(){
-  addEdge("8thAve/42nd","8thAve/W41std", rand() % 10 + 1);
-  addEdge("8thAve/42nd","FashionAve/W42nd", rand() % 10 + 1);
-  addEdge("8thAve/41st","8thAve/W40th", rand() % 10 + 1);
-  addEdge("8thAve/41st","FashionAve/W41st", rand() % 10 + 1);
-  addEdge("8thAve/40th","8thAve/W39th", rand() % 10 + 1);
-  addEdge("8thAve/40th","FashionAve/W40th", rand() % 10 + 1);
-  addEdge("8thAve/39th","8thAve/W38th", rand() % 10 + 1);
-  addEdge("8thAve/39th","FashionAve/W39th", rand() % 10 + 1);
-  addEdge("8thAve/38th","8thAve/W37th", rand() % 10 + 1);
-  addEdge("8thAve/38th","FashionAve/W38th", rand() % 10 + 1);
-  addEdge("8thAve/37th","8thAve/W36th", rand() % 10 + 1);
-  addEdge("8thAve/37th","FashionAve/W37th", rand() % 10 + 1);
-  addEdge("8thAve/36th","8thAve/W35th", rand() % 10 + 1);
-  addEdge("8thAve/36th","FashionAve/W36th", rand() % 10 + 1);
-  addEdge("8thAve/35th","8thAve/W34th", rand() % 10 + 1);
-  addEdge("8thAve/35th","FashionAve/W35th", rand() % 10 + 1);
-  addEdge("8thAve/34th","8thAve/W33rd", rand() % 10 + 1);
-  addEdge("8thAve/34th","FashionAve/W34th", rand() % 10 + 1);
-  addEdge("8thAve/33rd","FashionAve/W33rd", rand() % 10 + 1);
+  addEdge("8thAve/W42nd","8thAve/W41std", rand() % 10 + 1);
+  addEdge("8thAve/W42nd","FashionAve/W42nd", rand() % 10 + 1);
+  addEdge("8thAve/W41st","8thAve/W40th", rand() % 10 + 1);
+  addEdge("8thAve/W41st","FashionAve/W41st", rand() % 10 + 1);
+  addEdge("8thAve/W40th","8thAve/W39th", rand() % 10 + 1);
+  addEdge("8thAve/W40th","FashionAve/W40th", rand() % 10 + 1);
+  addEdge("8thAve/W39th","8thAve/W38th", rand() % 10 + 1);
+  addEdge("8thAve/W39th","FashionAve/W39th", rand() % 10 + 1);
+  addEdge("8thAve/W38th","8thAve/W37th", rand() % 10 + 1);
+  addEdge("8thAve/W38th","FashionAve/W38th", rand() % 10 + 1);
+  addEdge("8thAve/W37th","8thAve/W36th", rand() % 10 + 1);
+  addEdge("8thAve/W37th","FashionAve/W37th", rand() % 10 + 1);
+  addEdge("8thAve/W36th","8thAve/W35th", rand() % 10 + 1);
+  addEdge("8thAve/W36th","FashionAve/W36th", rand() % 10 + 1);
+  addEdge("8thAve/W35th","8thAve/W34th", rand() % 10 + 1);
+  addEdge("8thAve/W35th","FashionAve/W35th", rand() % 10 + 1);
+  addEdge("8thAve/W34th","8thAve/W33rd", rand() % 10 + 1);
+  addEdge("8thAve/W34th","FashionAve/W34th", rand() % 10 + 1);
+  addEdge("8thAve/W33rd","FashionAve/W33rd", rand() % 10 + 1);
   addEdge("FashionAve/W43rd","FashionAve/W42nd", rand() % 10 + 1);
   addEdge("FashionAve/W42nd","6thAve/W42nd", rand() % 10 + 1);
   addEdge("FashionAve/W42nd","FashionAve/W41st", rand() % 10 + 1);
@@ -353,15 +365,6 @@ void NewYork :: loadEdges(){
 
 
 
-void NewYork :: displayEdges(){
-  for(unsigned int i = 0; i < vertices.size(); i++){
-    cout << vertices[i] -> name << " --> ";
-    for(unsigned int j = 0; j < vertices[i] -> adj.size(); j++){
-       cout << vertices[i]->adj[j].v->name << " ";
-    }
-    cout << endl;
-  }
-}
 
 // void NewYork :: breadthFirstTraverse(string sourceVertex, string storeType){
 //   queue<vertex*> q;
@@ -429,14 +432,7 @@ vertex* NewYork :: searchGraph(string streetName){
   return 0;
 }
 
-intersection* NewYork :: updatePrev(intersection* prev, string storeName){
-  for(unsigned int i = 0; i < vertices.size(); i++){
-      if(vertices[i]->name == storeName)
-      {
-        return prev = vertices[i];
-      }
-  }
-}
+
 
 vertex* NewYork::DijkstraAlgorithm(string start, string end)
 {
