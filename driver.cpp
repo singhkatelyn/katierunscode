@@ -59,7 +59,7 @@ int main()
     }
   }
 
-  while(response == "Y" || response == "N")
+  while(response == "Y" || response == "y")
   {
     cout << "Enter the street you are on that runs North to South. Use the form 'StreetNameAve' e.i. '8thAve' or 'FashionAve'." << endl;
     cin >> NSStCurr;
