@@ -54,17 +54,18 @@ intersection* NewYork::searchStore(string storeName){
   return NULL;
 }
 
-void NewYork::printStores(){
-  intersection*temp = head;
-  int counter = 0;
-  if(temp == NULL){
-    cout << "nothing in path" << endl;
-  }
-	while(temp != NULL){
-		cout << counter << ". " << temp -> storeName << endl;
-    counter++;
-  cout << "===" << endl;
-  }
+void NewYork::printStores(string destination){
+  // intersection*temp = head;
+  // int counter = 0;
+  // if(temp == NULL){
+  //   cout << "nothing in path" << endl;
+  // }
+	// while(temp != NULL){
+	// 	cout << counter << ". " << temp -> storeName << endl;
+  //   counter++;
+  // cout << "===" << endl;
+  // }
+
 }
 
 
@@ -564,9 +565,12 @@ string tempstreet = "";
         }
       }
       if(streets[i][j] == tempstreet){
-        if(tempstreet == solved[0] || tempstreet == solved[solved.size()-1])
+        if(tempstreet == solved[0])
         {
           cout << termcolor::cyan << tempstreet;
+        }
+        else if(tempstreet == solved[solved.size()-1]){
+          cout << termcolor :: magenta << tempstreet;
         }
         else{
           cout << termcolor::green << tempstreet;
