@@ -1,6 +1,6 @@
 #include "Header.hpp"
 #include <iostream>
-#include "termcolor.hpp"
+//#include "termcolor.hpp"
 #include <vector>
 #include <climits>
 
@@ -18,29 +18,51 @@ bool NewYork ::isEmpty(){
   return false;
 }
 
-intersection* NewYork::insertStore(intersection* previous, string storeName){
-  intersection* temp;
-  if (previous == NULL){
-    //cout << "adding: " << storeName << " (HEAD)" << endl; //comment out after testing is done
-    temp = head;
-    head = new intersection;
-    head -> storeName = storeName;
-    head -> next = temp;
+intersection* NewYork::insertStore(vertex* node, string storeName){//not in alphabetical order anymore
+intersection* temp = node->head; //start the LL at the head
+intersection* n = new intersection;
+  if (node->head == NULL) //attach LL to the graph node if it's the first node
+  {
+    node->head = n;
+    //node->head=temp;
+    n->storeName = storeName;
+    n->next = NULL;
+  cout << "insert first node" << endl;
   }
-  else if (head == NULL){
-    //cout << "adding: " << storeName << " (HEAD)" << endl; //comment out after testing is done
-    head = new intersection;
-    head -> storeName = storeName;
-    head -> next = NULL;
-  }
-  else{
-    //cout << "adding: " << storeName << " (prev: " << previous -> storeName << ")" << endl; //comment out after testing is done
-    temp = new intersection;
-    temp -> next = previous -> next; //a to c now b to c
-    previous -> next = temp; //a to b
-    temp -> storeName = storeName; //fill
+  else //add nodes to the end of the LL
+  {
+    while(temp -> next !="")//go to the end of the LL
+    cout << "sdfsadf" << endl;
+      temp=temp->next;
+ cout << "insertStore at end" << endl;
+        temp->next = n;
+        cout << "a" << endl;
+        n->storeName=storeName;//store store name
+        cout << "b" << endl;
+        n->next="";//set the space after the node to NULL
+cout << "end of insert store at end" << endl;
   }
   return temp;
+  //   //cout << "adding: " << storeName << " (HEAD)" << endl; //comment out after testing is done
+  //   temp = head;
+  //   head = new intersection;
+  //   head -> storeName = storeName;
+  //   head -> next = temp;
+  // }
+  // else if (head == NULL){
+  //   //cout << "adding: " << storeName << " (HEAD)" << endl; //comment out after testing is done
+  //   head = new intersection;
+  //   head -> storeName = storeName;
+  //   head -> next = NULL;
+  // }
+  // else{
+  //   //cout << "adding: " << storeName << " (prev: " << previous -> storeName << ")" << endl; //comment out after testing is done
+  //   temp = new intersection;
+  //   temp -> next = previous -> next; //a to c now b to c
+  //   previous -> next = temp; //a to b
+  //   temp -> storeName = storeName; //fill
+  // }
+  // return temp;
 }
 
 intersection* NewYork::searchStore(string storeName){
@@ -541,77 +563,77 @@ void NewYork :: printDirectionsOnly(vector<string> solved){
 
 string tempstreet = "";
 
-  for(int i = 0; i < 10; i++){
-    for(int j = 0; j < 8; j++){
-      // for(int k = 0; k < solved.size(); k++){
-      // if(streets[i][j] == solved[k]){
-      //   cout << termcolor::green << streets[i][j];
-      // }
-      // else{
-      //   cout << termcolor ::red << streets[i][j];
-      // }
-      // if(j!=7 && i != 9){
-      //   cout<< termcolor :: white;
-      //    cout << "-->";
-      // }
-      // if(j == 9){
-      //   cout << endl;
-      // }
-      //
-      // }
-      for(int k = 0; k <= solved.size(); k++){
-        if(streets[i][j] == solved[k]){
-          tempstreet = solved[k];
-        }
-      }
-      if(streets[i][j] == tempstreet){
-        if(tempstreet == solved[0])
-        {
-          cout << termcolor::cyan << tempstreet;
-        }
-        else if(tempstreet == solved[solved.size()-1]){
-          cout << termcolor :: magenta << tempstreet;
-        }
-        else{
-          cout << termcolor::green << tempstreet;
-        }
-
-      }
-      else
-      {
-        cout << termcolor ::red << streets[i][j];
-      }
-      if(j!=7 && i != 10){
-        cout<< termcolor :: white;
-         cout << "<->";
-      }
-      if(j == 9){
-        cout << endl;
-      }
-    }
-    cout << termcolor:: white;
-    cout << endl;
-    if(i != 9){
-      for(int i = 0; i < 8; i++){
-        cout << "  |               ";
-        if(i == 7){
-          cout << endl;
-        }
-      }
-      for(int i = 0; i < 8; i++){
-        cout << "  |               ";
-        if(i == 7){
-          cout << endl;
-        }
-      }
-      // for(int i = 0; i < 8; i++){
-      //   cout << " V               ";
-      //   if(i == 7){
-      //     cout << endl;
-      //   }
-      // }
-    }
-  }
-  cout << termcolor :: white << endl;
-  cout << endl;
+  // for(int i = 0; i < 10; i++){
+  //   for(int j = 0; j < 8; j++){
+  //     // for(int k = 0; k < solved.size(); k++){
+  //     // if(streets[i][j] == solved[k]){
+  //     //   cout << termcolor::green << streets[i][j];
+  //     // }
+  //     // else{
+  //     //   cout << termcolor ::red << streets[i][j];
+  //     // }
+  //     // if(j!=7 && i != 9){
+  //     //   cout<< termcolor :: white;
+  //     //    cout << "-->";
+  //     // }
+  //     // if(j == 9){
+  //     //   cout << endl;
+  //     // }
+  //     //
+  //     // }
+  //     for(int k = 0; k <= solved.size(); k++){
+  //       if(streets[i][j] == solved[k]){
+  //         tempstreet = solved[k];
+  //       }
+  //     }
+  //     if(streets[i][j] == tempstreet){
+  //       if(tempstreet == solved[0])
+  //       {
+  //         cout << termcolor::cyan << tempstreet;
+  //       }
+  //       else if(tempstreet == solved[solved.size()-1]){
+  //         cout << termcolor :: magenta << tempstreet;
+  //       }
+  //       else{
+  //         cout << termcolor::green << tempstreet;
+  //       }
+  //
+  //     }
+  //     else
+  //     {
+  //       cout << termcolor ::red << streets[i][j];
+  //     }
+  //     if(j!=7 && i != 10){
+  //       cout<< termcolor :: white;
+  //        cout << "<->";
+  //     }
+  //     if(j == 9){
+  //       cout << endl;
+  //     }
+  //   }
+  //   cout << termcolor:: white;
+  //   cout << endl;
+  //   if(i != 9){
+  //     for(int i = 0; i < 8; i++){
+  //       cout << "  |               ";
+  //       if(i == 7){
+  //         cout << endl;
+  //       }
+  //     }
+  //     for(int i = 0; i < 8; i++){
+  //       cout << "  |               ";
+  //       if(i == 7){
+  //         cout << endl;
+  //       }
+  //     }
+  //     // for(int i = 0; i < 8; i++){
+  //     //   cout << " V               ";
+  //     //   if(i == 7){
+  //     //     cout << endl;
+  //     //   }
+  //     // }
+  //   }
+  // }
+  // cout << termcolor :: white << endl;
+  // cout << endl;
 }
