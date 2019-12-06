@@ -104,23 +104,27 @@ int main()
     {
       //initialize a counter to keep track of what you're reading in from file
       int counter = 0;
+
+      cout << 1 << endl;
+
       stringstream ss(line); //use string stream to separate words in that line
       getline(ss, street, ','); //at each line the first word is the intersection
       counter++;//note that the first word is added
       //search the graph for "intersection"
       //to find the vertex in which the linked list will be attached
       vertexOfInt = h.searchGraph(street);
-
-      intersection* previous = NULL;
+      intersection* previous;
       //after the first word then add the words to the linked list until the word is NULL
       while(getline(ss, store, ',') && counter > 0 && store != "NULL")
       {
         if(store == "NULL"){
           break;
         }
-        previous = h.insertStore(previous, store);
-        //h.updatePrev(previous, store);
-        //vertex struct in graph: name of intersection + LL
+        cout << 2 << endl;
+
+        previous = h.insertStore(vertexOfInt, store);//pass in the vertex you are connecting the store to
+
+        cout << 3 << endl;
       }
     }
   }
