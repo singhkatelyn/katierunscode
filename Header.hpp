@@ -29,6 +29,7 @@ struct vertex{
     string color;
     int distance;
     vertex *pred;
+    intersection* head;
     vector<adjVertex> adj;
 };
 
@@ -51,7 +52,7 @@ class NewYork{
     vector<string> printDirections(string start, string end);
     void printDirectionsOnly(vector<string>);
     bool isEmpty();
-    intersection* insertStore(intersection* previous, string storeName);
+    intersection* insertStore(vertex* node, string storeName);
     intersection* searchStore(string storeName);
     void printStores(string);
 };
